@@ -1,230 +1,157 @@
 // ============================================================================
-// LoadDash — Scene 2 / Step 2 "Choose your items"  ELEMENT BUILD
+// LoadDash — Scene 2 / Step 2 "Choose your items"  — 2D SCREEN-SPACE BUILD
 // ----------------------------------------------------------------------------
-// The 6 item layers are ALREADY in the timeline. This script:
-//   - finds each item layer by name and applies the ring -> orbit(x2) -> land
-//     Position expression (plus optional self-spin + settle-bounce)
-//   - creates the "STEP 2" title + "pick your items" prompt (animate in),
-//     unless layers with those names already exist
+// Builds Scene 2 in flat 2D screen space (1920x1080), camera-independent:
+//   - CARD ("Step 2"): 2D, 50% scale, at 212.9 , 576.4 (left)
+//   - 6 ITEMS: 2D, fly in from the right, orbit two smooth circles, land in a
+//     2x3 grid on the right; optional self-spin + settle bounce
+//   - "STEP 2" title + "pick your items" prompt (created if missing)
 //
-// It NEVER creates duplicate items, never renames your item layers, and never
-// deletes them. Re-running just refreshes the expressions (safe to iterate).
-// Camera 2, Card 2, and the navy background are left untouched.
-//
-// HOW TO RUN
-//   1. Make your Scene 2 comp active.
-//   2. File > Scripts > Run Script File...  (or Claude Desktop: "run via run-script")
-//   3. Read the summary it prints (matched / missing / ambiguous items).
+// Non-destructive: never duplicates/renames/deletes your layers. Re-run safe.
+// HOW TO RUN: make Main Comp active -> File > Scripts > Run Script File...
 // ============================================================================
 
 (function () {
 
   // ============================ CONFIG ====================================
-  var COMP_NAME         = "";     // "" = active comp, or e.g. "Scene 2"
-  var ADD_SELF_SPIN     = true;   // Rotation: tumble twice during the orbit
-  var ADD_SETTLE_BOUNCE = true;   // Scale: small overshoot when it lands
-  var ITEM_SCALE        = 40;     // % size of each item in the grid (shrink to stop overlap)
-  var STAGGER           = false;  // arrive ~2 frames apart (adds i*0.08 to tIn/tForm)
-  var BUILD_TEXT        = true;   // create the title + prompt if missing
+  var COMP_NAME   = "";          // "" = active comp
 
-  // ring + timing (from the spec)
-  var Cx = 3260, Cy = 540, R = 320, N = 6;
+  // CARD
+  var CARD_NAME   = "Step 2";    // the card layer (the Step 2 PNG)
+  var CARD_SCALE  = 50;          // %
+  var CARD_POS    = [212.9, 576.4];
+
+  // ITEM ANIMATION (all in 1920x1080 screen space)
+  var Cx = 1250, Cy = 540, R = 240, N = 6;     // ring center + radius (right side)
+  var PARK_OFF = 900;                          // how far off-screen-right they start
   var tIn = 28.8, tForm = 29.4, tOrbitEnd = 31.4, tLand = 32.4;
+  var ITEM_SCALE = 35;           // % size of each item
+  var ADD_SELF_SPIN = true;      // items tumble twice as the ring turns
+  var ADD_SETTLE_BOUNCE = true;  // little overshoot on landing
+  var STAGGER = false;           // arrive ~2 frames apart
 
-  // anchor to the SAME refs Camera 2 uses, so items sit where the camera looks.
-  // Camera 2 frames world X = (Step2.x + 960 - Step1.x); these were 2976 / 540
-  // when the spec numbers above were authored. The expression re-derives the
-  // shift live, so it tracks the scene-2 anchor wherever it is in world space.
-  var ANCHOR_TO_STEPS = true;
-  var STEP1_REF = "Step 1", STEP2_REF = "Step 2";
-  var BASE_X = 2976, BASE_Y = 540;   // framed center the spec coords assume
-
-  // 6 items: name (matched against timeline layer names), i, fx/fy (2x3 grid)
+  // 6 items: name, ring slot i (0..5), final grid spot (screen px)
   var ITEMS = [
-    { name:"loaddash_item_yard-debris",  i:5, fx:2950.87, fy:525, label:"top-left"     },
-    { name:"loaddash_item_other",        i:4, fx:3256.87, fy:537, label:"top-center"   },
-    { name:"loaddash_item_bagged-trash", i:0, fx:3529.87, fy:531, label:"top-right"    },
-    { name:"loaddash_item_donation",     i:2, fx:2992.87, fy:888, label:"bottom-left"  },
-    { name:"loaddash_item_furniture",    i:3, fx:3268.87, fy:903, label:"bottom-center"},
-    { name:"loaddash_item_cardboard",    i:1, fx:3556.87, fy:894, label:"bottom-right" }
+    { name:"loaddash_item_yard-debris",  i:5, fx:1000, fy:380, label:"top-left"     },
+    { name:"loaddash_item_other",        i:4, fx:1280, fy:380, label:"top-center"   },
+    { name:"loaddash_item_bagged-trash", i:0, fx:1560, fy:380, label:"top-right"    },
+    { name:"loaddash_item_donation",     i:2, fx:1000, fy:700, label:"bottom-left"  },
+    { name:"loaddash_item_furniture",    i:3, fx:1280, fy:700, label:"bottom-center"},
+    { name:"loaddash_item_cardboard",    i:1, fx:1560, fy:700, label:"bottom-right" }
   ];
 
-  // text
-  var TITLE_TEXT  = "STEP 2";
-  var PROMPT_TEXT = "pick your items";
-  var TITLE_POS   = [2900, 200];   // tweak to taste (top/right of the card)
-  var PROMPT_POS  = [2900, 330];
-  var TEXT_IN_START = 27.5, TEXT_IN_END = 28.2;
+  // TEXT
+  var BUILD_TEXT = true;
+  var TITLE_TEXT = "STEP 2",  PROMPT_TEXT = "pick your items";
+  var TITLE_POS  = [1180, 150], PROMPT_POS = [1180, 250];
+  var TEXT_IN_START = 27.8, TEXT_IN_END = 28.5;
 
-  var TAG = "S2_";   // only used for the text layers this script makes
+  var TAG = "S2_";
   // ========================================================================
 
 
-  // ----------------------------- helpers ----------------------------------
   function findComp(name){
-    if (name){
-      for (var i=1;i<=app.project.numItems;i++){
-        var it=app.project.item(i);
-        if (it instanceof CompItem && it.name===name) return it;
-      }
-      return null;
-    }
-    var a=app.project.activeItem;
-    return (a && (a instanceof CompItem)) ? a : null;
+    if (name){ for (var i=1;i<=app.project.numItems;i++){ var it=app.project.item(i);
+      if (it instanceof CompItem && it.name===name) return it; } return null; }
+    var a=app.project.activeItem; return (a && (a instanceof CompItem)) ? a : null;
   }
-
-  // match a timeline layer to an item name; returns layer, null, or "AMBIGUOUS"
+  function exactLayer(comp, name){
+    var n=name.toLowerCase();
+    for (var i=1;i<=comp.numLayers;i++) if (comp.layer(i).name.toLowerCase()===n) return comp.layer(i);
+    return null;
+  }
   function matchLayer(comp, base){
-    var b = base.toLowerCase();
-    var exts = ["", ".png", ".psd", ".ai", ".jpg", ".jpeg", ".tif"];
-    // 1) exact name (with/without a common extension), case-insensitive
-    for (var e=0;e<exts.length;e++){
-      var target = b + exts[e];
-      for (var i=1;i<=comp.numLayers;i++){
-        if (comp.layer(i).name.toLowerCase() === target) return comp.layer(i);
-      }
-    }
-    // 2) "contains" — only if exactly one layer contains the base name
-    var hits=[];
-    for (var j=1;j<=comp.numLayers;j++){
-      if (comp.layer(j).name.toLowerCase().indexOf(b) !== -1) hits.push(comp.layer(j));
-    }
-    if (hits.length===1) return hits[0];
-    if (hits.length>1)  return "AMBIGUOUS";
-    return null;
+    var b=base.toLowerCase(), exts=["",".png",".psd",".ai",".jpg",".jpeg",".tif"];
+    for (var e=0;e<exts.length;e++){ var t=b+exts[e];
+      for (var i=1;i<=comp.numLayers;i++) if (comp.layer(i).name.toLowerCase()===t) return comp.layer(i); }
+    var hits=[]; for (var j=1;j<=comp.numLayers;j++) if (comp.layer(j).name.toLowerCase().indexOf(b)!==-1) hits.push(comp.layer(j));
+    if (hits.length===1) return hits[0]; if (hits.length>1) return "AMBIGUOUS"; return null;
   }
-
-  function layerByName(comp, name){
-    for (var i=1;i<=comp.numLayers;i++) if (comp.layer(i).name===name) return comp.layer(i);
-    return null;
-  }
-
   function easyEase(prop){
     for (var k=1;k<=prop.numKeys;k++){
-      prop.setInterpolationTypeAtKey(k,
-        KeyframeInterpolationType.BEZIER, KeyframeInterpolationType.BEZIER);
+      prop.setInterpolationTypeAtKey(k, KeyframeInterpolationType.BEZIER, KeyframeInterpolationType.BEZIER);
       try { prop.setTemporalEaseAtKey(k, [new KeyframeEase(0,33)], [new KeyframeEase(0,33)]); } catch(e){}
     }
   }
 
-  // the one Position expression that does everything, with this item's literals
+  // 2D position expression: park right -> fly in -> orbit 2 turns -> land in grid
   function posExpr(it){
-    var tin = STAGGER ? (tIn   + it.i*0.08) : tIn;
-    var tfo = STAGGER ? (tForm + it.i*0.08) : tForm;
-    var anchor = ANCHOR_TO_STEPS ? [
-      "var shiftX=0, shiftY=0;",
-      "try {",
-      "  var s1=thisComp.layer(\""+STEP1_REF+"\").transform.position[0];",
-      "  var s2=thisComp.layer(\""+STEP2_REF+"\").transform.position[0];",
-      "  var s2y=thisComp.layer(\""+STEP2_REF+"\").transform.position[1];",
-      "  shiftX = (s2 + 960 - s1) - "+BASE_X+";",          // track Camera 2's framed center
-      "  shiftY = s2y - "+BASE_Y+";",
-      "} catch(e){}"
-    ].join("\n") : "var shiftX=0, shiftY=0;";
+    var tin = STAGGER ? (tIn+it.i*0.08) : tIn;
+    var tfo = STAGGER ? (tForm+it.i*0.08) : tForm;
     return [
-      anchor,
-      "var Cx="+Cx+", Cy="+Cy+", R="+R+", N="+N+";",
+      "var Cx="+Cx+", Cy="+Cy+", R="+R+", N="+N+", off="+PARK_OFF+";",
       "var i="+it.i+", fx="+it.fx+", fy="+it.fy+";",
       "var tIn="+tin+", tForm="+tfo+", tOrbitEnd="+tOrbitEnd+", tLand="+tLand+";",
-      "var base = i*2*Math.PI/N;",
-      "var twoTurns = 2*2*Math.PI;",
-      "var ringX = Cx + R*Math.cos(base);",
-      "var ringY = Cy + R*Math.sin(base);",
-      "var px, py;",
-      "if (time < tIn) {",                                   // parked off-screen right
-      "  px = (Cx+1500) + R*Math.cos(base); py = ringY;",
-      "} else if (time < tForm) {",                          // fly in -> form ring
-      "  var cx = ease(time, tIn, tForm, Cx+1500, Cx);",
-      "  px = cx + R*Math.cos(base); py = ringY;",
-      "} else if (time < tOrbitEnd) {",                      // orbit 2 full turns
-      "  var a = base + ease(time, tForm, tOrbitEnd, 0, twoTurns);",
-      "  px = Cx + R*Math.cos(a); py = Cy + R*Math.sin(a);",
-      "} else if (time < tLand) {",                          // peel off -> grid
-      "  px = ease(time, tOrbitEnd, tLand, ringX, fx);",
-      "  py = ease(time, tOrbitEnd, tLand, ringY, fy);",
-      "} else {",                                            // settled in grid
-      "  px = fx; py = fy;",
-      "}",
-      "[px + shiftX, py + shiftY, 0]"
+      "var base=i*2*Math.PI/N, twoTurns=2*2*Math.PI;",
+      "var ringX=Cx+R*Math.cos(base), ringY=Cy+R*Math.sin(base);",
+      "var px,py;",
+      "if (time<tIn){ px=(Cx+off)+R*Math.cos(base); py=ringY; }",
+      "else if (time<tForm){ var cx=ease(time,tIn,tForm,Cx+off,Cx); px=cx+R*Math.cos(base); py=ringY; }",
+      "else if (time<tOrbitEnd){ var a=base+ease(time,tForm,tOrbitEnd,0,twoTurns); px=Cx+R*Math.cos(a); py=Cy+R*Math.sin(a); }",
+      "else if (time<tLand){ px=ease(time,tOrbitEnd,tLand,ringX,fx); py=ease(time,tOrbitEnd,tLand,ringY,fy); }",
+      "else { px=fx; py=fy; }",
+      "[px,py]"
     ].join("\n");
   }
 
-  // apply the expressions to an existing item layer (no creation/rename/delete)
-  function applyToItem(lyr, it){
-    var is3D = lyr.threeDLayer;
-    // make sure the layer is actually live during the animation window
-    if (lyr.inPoint  > tIn)   lyr.inPoint  = tIn  - 0.5;
+  function applyItem(lyr, it){
+    lyr.threeDLayer = false;                     // 2D screen space
+    if (lyr.inPoint  > tIn)   lyr.inPoint  = tIn - 0.5;
     if (lyr.outPoint < tLand) lyr.outPoint = tLand + 1.0;
-    lyr.enabled = true;  // un-hide if it was toggled off
+    lyr.enabled = true;
     lyr.property("Transform").property("Position").expression = posExpr(it);
-
-    if (ADD_SELF_SPIN){
-      var rot = is3D ? lyr.property("Transform").property("Z Rotation")
-                     : lyr.property("Transform").property("Rotation");
-      rot.expression = "ease(time, "+tForm+", "+tOrbitEnd+", 0, 360*2)";
-    }
-    // base scale (keeps items from overlapping) + optional settle overshoot
-    var sExpr;
-    if (ADD_SETTLE_BOUNCE){
-      var end = (tLand+0.3);
-      sExpr = "var s="+ITEM_SCALE+"; if (time>"+tLand+" && time<"+end+") { s="+ITEM_SCALE+"+("+ITEM_SCALE+"*0.08)*Math.sin((time-"+tLand+")/0.3*Math.PI); } ";
-    } else {
-      sExpr = "var s="+ITEM_SCALE+"; ";
-    }
-    lyr.property("Transform").property("Scale").expression = sExpr + (is3D ? "[s,s,s]" : "[s,s]");
+    if (ADD_SELF_SPIN)
+      lyr.property("Transform").property("Rotation").expression = "ease(time,"+tForm+","+tOrbitEnd+",0,360*2)";
+    var s;
+    if (ADD_SETTLE_BOUNCE){ var end=(tLand+0.3);
+      s = "var s="+ITEM_SCALE+"; if (time>"+tLand+" && time<"+end+"){ s="+ITEM_SCALE+"+("+ITEM_SCALE+"*0.08)*Math.sin((time-"+tLand+")/0.3*Math.PI); } [s,s]";
+    } else { s = "["+ITEM_SCALE+","+ITEM_SCALE+"]"; }
+    lyr.property("Transform").property("Scale").expression = s;
   }
 
   function makeText(comp, str, pos, name){
-    if (layerByName(comp, TAG+name)) return "exists";  // don't clobber a prior build
-    var t = comp.layers.addText(str);
-    t.name = TAG + name;
-    var p = t.property("Transform").property("Position");
-    p.setValueAtTime(TEXT_IN_START, [pos[0]+120, pos[1]]);
-    p.setValueAtTime(TEXT_IN_END,   [pos[0],     pos[1]]);
-    easyEase(p);
-    var o = t.property("Transform").property("Opacity");
-    o.setValueAtTime(TEXT_IN_START, 0);
-    o.setValueAtTime(TEXT_IN_END,  100);
-    easyEase(o);
-    return "created";
+    if (exactLayer(comp, TAG+name)) return;
+    var t=comp.layers.addText(str); t.name=TAG+name; t.threeDLayer=false;
+    var p=t.property("Transform").property("Position");
+    p.setValueAtTime(TEXT_IN_START,[pos[0]+120,pos[1]]); p.setValueAtTime(TEXT_IN_END,[pos[0],pos[1]]); easyEase(p);
+    var o=t.property("Transform").property("Opacity");
+    o.setValueAtTime(TEXT_IN_START,0); o.setValueAtTime(TEXT_IN_END,100); easyEase(o);
   }
 
   // ------------------------------ run -------------------------------------
   var comp = findComp(COMP_NAME);
-  if (!comp){
-    alert("Step 2 build: no comp found.\nOpen your Scene 2 comp (make it active) or set COMP_NAME.");
-    return;
+  if (!comp){ alert("No comp. Open Main Comp and re-run."); return; }
+
+  app.beginUndoGroup("Build Scene 2 (2D)");
+  var report=[], missing=[], ambiguous=[];
+
+  // CARD
+  var card = exactLayer(comp, CARD_NAME) || matchLayer(comp, CARD_NAME);
+  if (card && card!=="AMBIGUOUS"){
+    card.threeDLayer = false;
+    card.property("Transform").property("Scale").setValue([CARD_SCALE,CARD_SCALE]);
+    card.property("Transform").property("Position").setValue(CARD_POS);
+    report.push("CARD #"+card.index+" "+card.name+" -> 2D, "+CARD_SCALE+"%, ["+CARD_POS[0]+","+CARD_POS[1]+"]");
+  } else {
+    report.push("CARD '"+CARD_NAME+"' "+(card==="AMBIGUOUS"?"AMBIGUOUS":"NOT FOUND"));
   }
 
-  app.beginUndoGroup("Build Step 2 elements");
-  var done=[], missing=[], ambiguous=[];
-  try {
-    for (var k=0;k<ITEMS.length;k++){
-      var it = ITEMS[k];
-      var L = matchLayer(comp, it.name);
-      if (L === "AMBIGUOUS")      { ambiguous.push(it.name); }
-      else if (L)                 { applyToItem(L, it);
-                                    done.push("#"+L.index+" "+L.name+" ("+it.label+")  in="+L.inPoint.toFixed(1)+" out="+L.outPoint.toFixed(1)+(L.threeDLayer?" 3D":" 2D")); }
-      else                        { missing.push(it.name); }
-    }
-    if (BUILD_TEXT){
-      makeText(comp, TITLE_TEXT,  TITLE_POS,  "title");
-      makeText(comp, PROMPT_TEXT, PROMPT_POS, "prompt");
-    }
-  } catch(err){
-    alert("Step 2 build error:\n" + err.toString());
+  // ITEMS
+  for (var k=0;k<ITEMS.length;k++){
+    var L = matchLayer(comp, ITEMS[k].name);
+    if (L==="AMBIGUOUS") ambiguous.push(ITEMS[k].name);
+    else if (L){ applyItem(L, ITEMS[k]); report.push("  #"+L.index+" "+L.name+" ("+ITEMS[k].label+")"); }
+    else missing.push(ITEMS[k].name);
   }
+  if (BUILD_TEXT){ makeText(comp,TITLE_TEXT,TITLE_POS,"title"); makeText(comp,PROMPT_TEXT,PROMPT_POS,"prompt"); }
   app.endUndoGroup();
 
-  // jump the playhead to mid-orbit so the result is impossible to miss
   try { comp.time = Math.min(tOrbitEnd, comp.duration - comp.frameDuration); } catch(e){}
 
-  var msg = "Step 2 build — comp: " + comp.name
-          + "\n(duration " + comp.duration.toFixed(1) + "s; playhead moved to " + comp.time.toFixed(1) + "s)\n\n"
-          + "Applied to " + done.length + " item(s):\n  " + (done.join("\n  ") || "(none)");
-  if (comp.duration < tLand) msg += "\n\n!! Comp is shorter than " + tLand + "s — the animation window is off the end of the timeline.";
-  if (missing.length)   msg += "\n\nNOT FOUND (rename the layer or fix ITEMS[].name):\n  " + missing.join(", ");
-  if (ambiguous.length) msg += "\n\nAMBIGUOUS (multiple layers match — rename to be unique):\n  " + ambiguous.join(", ");
+  var msg = "Scene 2 (2D) — "+comp.name+"  "+comp.width+"x"+comp.height
+          + "  (playhead -> "+comp.time.toFixed(1)+"s)\n\n" + report.join("\n");
+  if (missing.length)   msg += "\n\nITEMS NOT FOUND: "+missing.join(", ");
+  if (ambiguous.length) msg += "\n\nAMBIGUOUS: "+ambiguous.join(", ");
   alert(msg);
 
 })();
