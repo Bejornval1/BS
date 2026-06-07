@@ -1,40 +1,36 @@
 // ============================================================================
 // LoadDash — Scene 2 / Step 2 "Choose your items"  ELEMENT BUILD
 // ----------------------------------------------------------------------------
-// Builds the Step 2 elements onto your existing Scene 2 comp:
-//   - "STEP 2" title  +  "pick your items" prompt  (animate in)
-//   - 6 item layers, each carrying the ring -> orbit(x2) -> land Position expr
-//   - optional self-spin (Rotation) and settle-bounce (Scale)
+// The 6 item layers are ALREADY in the timeline. This script:
+//   - finds each item layer by name and applies the ring -> orbit(x2) -> land
+//     Position expression (plus optional self-spin + settle-bounce)
+//   - creates the "STEP 2" title + "pick your items" prompt (animate in),
+//     unless layers with those names already exist
 //
-// Camera 2, Card 2, and the navy background are assumed ALREADY in the comp
-// (per the spec they're done / unchanged) — this script does NOT touch them.
+// It NEVER creates duplicate items, never renames your item layers, and never
+// deletes them. Re-running just refreshes the expressions (safe to iterate).
+// Camera 2, Card 2, and the navy background are left untouched.
 //
 // HOW TO RUN
-//   1. Open / make active your Scene 2 comp.
-//   2. File > Scripts > Run Script File...  ->  pick this file.
-//      (or in Claude Desktop: "run this script via run-script")
-//   3. Re-run safely: it removes any layers it created on a prior run first.
-//
-// ITEM ART
-//   - Set ITEM_ART_FOLDER to a folder containing <name>.png to import real art.
-//   - Otherwise each item is a labeled placeholder solid you can replace later.
+//   1. Make your Scene 2 comp active.
+//   2. File > Scripts > Run Script File...  (or Claude Desktop: "run via run-script")
+//   3. Read the summary it prints (matched / missing / ambiguous items).
 // ============================================================================
 
 (function () {
 
   // ============================ CONFIG ====================================
-  var COMP_NAME        = "";      // "" = active comp, or e.g. "Scene 2"
-  var ITEM_ART_FOLDER  = "";      // "" = placeholder solids; else "/path/to/pngs"
-  var MAKE_3D          = true;    // items/text as 3D (needed if framed by camera)
-  var ADD_SELF_SPIN    = true;    // Rotation: tumble twice during the orbit
-  var ADD_SETTLE_BOUNCE= true;    // Scale: small overshoot when it lands
-  var STAGGER          = false;   // arrive ~2 frames apart (adds i*0.08 to tIn/tForm)
+  var COMP_NAME         = "";     // "" = active comp, or e.g. "Scene 2"
+  var ADD_SELF_SPIN     = true;   // Rotation: tumble twice during the orbit
+  var ADD_SETTLE_BOUNCE = true;   // Scale: small overshoot when it lands
+  var STAGGER           = false;  // arrive ~2 frames apart (adds i*0.08 to tIn/tForm)
+  var BUILD_TEXT        = true;   // create the title + prompt if missing
 
   // ring + timing (from the spec)
   var Cx = 3260, Cy = 540, R = 320, N = 6;
   var tIn = 28.8, tForm = 29.4, tOrbitEnd = 31.4, tLand = 32.4;
 
-  // 6 items: name, i (ring slot 0..5), fx/fy (final 2x3 grid spot)
+  // 6 items: name (matched against timeline layer names), i, fx/fy (2x3 grid)
   var ITEMS = [
     { name:"yard-debris",  i:5, fx:2950.87, fy:525, label:"top-left"     },
     { name:"other",        i:4, fx:3256.87, fy:537, label:"top-center"   },
@@ -51,7 +47,7 @@
   var PROMPT_POS  = [2900, 330];
   var TEXT_IN_START = 27.5, TEXT_IN_END = 28.2;
 
-  var TAG = "S2_";   // marks layers this script makes (for safe re-runs)
+  var TAG = "S2_";   // only used for the text layers this script makes
   // ========================================================================
 
 
@@ -68,32 +64,37 @@
     return (a && (a instanceof CompItem)) ? a : null;
   }
 
-  function findFootage(base){
-    base = base.toLowerCase();
-    for (var i=1;i<=app.project.numItems;i++){
-      var it=app.project.item(i);
-      if (it instanceof FootageItem){
-        var n=it.name.toLowerCase();
-        if (n===base || n===base+".png" || n.indexOf(base)===0) return it;
+  // match a timeline layer to an item name; returns layer, null, or "AMBIGUOUS"
+  function matchLayer(comp, base){
+    var b = base.toLowerCase();
+    var exts = ["", ".png", ".psd", ".ai", ".jpg", ".jpeg", ".tif"];
+    // 1) exact name (with/without a common extension), case-insensitive
+    for (var e=0;e<exts.length;e++){
+      var target = b + exts[e];
+      for (var i=1;i<=comp.numLayers;i++){
+        if (comp.layer(i).name.toLowerCase() === target) return comp.layer(i);
       }
     }
+    // 2) "contains" — only if exactly one layer contains the base name
+    var hits=[];
+    for (var j=1;j<=comp.numLayers;j++){
+      if (comp.layer(j).name.toLowerCase().indexOf(b) !== -1) hits.push(comp.layer(j));
+    }
+    if (hits.length===1) return hits[0];
+    if (hits.length>1)  return "AMBIGUOUS";
     return null;
   }
 
-  function removeOldBuild(comp){
-    for (var i=comp.numLayers; i>=1; i--){
-      var L=comp.layer(i);
-      if (L.name.indexOf(TAG)===0) L.remove();
-    }
+  function layerByName(comp, name){
+    for (var i=1;i<=comp.numLayers;i++) if (comp.layer(i).name===name) return comp.layer(i);
+    return null;
   }
 
   function easyEase(prop){
     for (var k=1;k<=prop.numKeys;k++){
       prop.setInterpolationTypeAtKey(k,
         KeyframeInterpolationType.BEZIER, KeyframeInterpolationType.BEZIER);
-      try {
-        prop.setTemporalEaseAtKey(k, [new KeyframeEase(0,33)], [new KeyframeEase(0,33)]);
-      } catch(e){}
+      try { prop.setTemporalEaseAtKey(k, [new KeyframeEase(0,33)], [new KeyframeEase(0,33)]); } catch(e){}
     }
   }
 
@@ -130,59 +131,37 @@
     ].join("\n");
   }
 
-  function makeItem(comp, it){
-    var lyr=null;
-
-    if (ITEM_ART_FOLDER){
-      var f = new File(ITEM_ART_FOLDER + "/" + it.name + ".png");
-      if (f.exists){
-        try { lyr = comp.layers.add(app.project.importFile(new ImportOptions(f))); } catch(e){}
-      }
-    }
-    if (!lyr){
-      var foot = findFootage(it.name);
-      if (foot) lyr = comp.layers.add(foot);
-    }
-    if (!lyr){
-      lyr = comp.layers.addSolid([0.85,0.86,0.92], it.name, 240, 240, comp.pixelAspect);
-    }
-
-    lyr.name = TAG + it.name;
-    if (MAKE_3D) lyr.threeDLayer = true;
-
+  // apply the expressions to an existing item layer (no creation/rename/delete)
+  function applyToItem(lyr, it){
+    var is3D = lyr.threeDLayer;
     lyr.property("Transform").property("Position").expression = posExpr(it);
 
     if (ADD_SELF_SPIN){
-      var rot = MAKE_3D ? lyr.property("Transform").property("Z Rotation")
-                        : lyr.property("Transform").property("Rotation");
+      var rot = is3D ? lyr.property("Transform").property("Z Rotation")
+                     : lyr.property("Transform").property("Rotation");
       rot.expression = "ease(time, "+tForm+", "+tOrbitEnd+", 0, 360*2)";
     }
     if (ADD_SETTLE_BOUNCE){
       var end = (tLand+0.3);
       lyr.property("Transform").property("Scale").expression =
         "s=100; if (time>"+tLand+" && time<"+end+") { s=100+8*Math.sin((time-"+tLand+")/0.3*Math.PI); } "
-        + (MAKE_3D ? "[s,s,s]" : "[s,s]");
+        + (is3D ? "[s,s,s]" : "[s,s]");
     }
-    return lyr;
   }
 
   function makeText(comp, str, pos, name){
+    if (layerByName(comp, TAG+name)) return "exists";  // don't clobber a prior build
     var t = comp.layers.addText(str);
     t.name = TAG + name;
-    if (MAKE_3D) t.threeDLayer = true;
-
     var p = t.property("Transform").property("Position");
-    var s = MAKE_3D ? [pos[0]+120, pos[1], 0] : [pos[0]+120, pos[1]];
-    var e = MAKE_3D ? [pos[0],     pos[1], 0] : [pos[0],     pos[1]];
-    p.setValueAtTime(TEXT_IN_START, s);
-    p.setValueAtTime(TEXT_IN_END,   e);
+    p.setValueAtTime(TEXT_IN_START, [pos[0]+120, pos[1]]);
+    p.setValueAtTime(TEXT_IN_END,   [pos[0],     pos[1]]);
     easyEase(p);
-
     var o = t.property("Transform").property("Opacity");
     o.setValueAtTime(TEXT_IN_START, 0);
     o.setValueAtTime(TEXT_IN_END,  100);
     easyEase(o);
-    return t;
+    return "created";
   }
 
   // ------------------------------ run -------------------------------------
@@ -193,14 +172,28 @@
   }
 
   app.beginUndoGroup("Build Step 2 elements");
+  var done=[], missing=[], ambiguous=[];
   try {
-    removeOldBuild(comp);                       // clean previous run
-    makeText(comp, TITLE_TEXT,  TITLE_POS,  "title");
-    makeText(comp, PROMPT_TEXT, PROMPT_POS, "prompt");
-    for (var k=0;k<ITEMS.length;k++) makeItem(comp, ITEMS[k]);
+    for (var k=0;k<ITEMS.length;k++){
+      var it = ITEMS[k];
+      var L = matchLayer(comp, it.name);
+      if (L === "AMBIGUOUS")      { ambiguous.push(it.name); }
+      else if (L)                 { applyToItem(L, it); done.push(it.name+" -> "+L.name+" ("+it.label+")"); }
+      else                        { missing.push(it.name); }
+    }
+    if (BUILD_TEXT){
+      makeText(comp, TITLE_TEXT,  TITLE_POS,  "title");
+      makeText(comp, PROMPT_TEXT, PROMPT_POS, "prompt");
+    }
   } catch(err){
     alert("Step 2 build error:\n" + err.toString());
   }
   app.endUndoGroup();
+
+  var msg = "Step 2 build — comp: " + comp.name + "\n\n"
+          + "Applied to " + done.length + " item(s):\n  " + (done.join("\n  ") || "(none)");
+  if (missing.length)   msg += "\n\nNOT FOUND (rename the layer or fix ITEMS[].name):\n  " + missing.join(", ");
+  if (ambiguous.length) msg += "\n\nAMBIGUOUS (multiple layers match — rename to be unique):\n  " + ambiguous.join(", ");
+  alert(msg);
 
 })();
