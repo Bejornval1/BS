@@ -23,6 +23,7 @@
   var COMP_NAME         = "";     // "" = active comp, or e.g. "Scene 2"
   var ADD_SELF_SPIN     = true;   // Rotation: tumble twice during the orbit
   var ADD_SETTLE_BOUNCE = true;   // Scale: small overshoot when it lands
+  var ITEM_SCALE        = 40;     // % size of each item in the grid (shrink to stop overlap)
   var STAGGER           = false;  // arrive ~2 frames apart (adds i*0.08 to tIn/tForm)
   var BUILD_TEXT        = true;   // create the title + prompt if missing
 
@@ -162,12 +163,15 @@
                      : lyr.property("Transform").property("Rotation");
       rot.expression = "ease(time, "+tForm+", "+tOrbitEnd+", 0, 360*2)";
     }
+    // base scale (keeps items from overlapping) + optional settle overshoot
+    var sExpr;
     if (ADD_SETTLE_BOUNCE){
       var end = (tLand+0.3);
-      lyr.property("Transform").property("Scale").expression =
-        "s=100; if (time>"+tLand+" && time<"+end+") { s=100+8*Math.sin((time-"+tLand+")/0.3*Math.PI); } "
-        + (is3D ? "[s,s,s]" : "[s,s]");
+      sExpr = "var s="+ITEM_SCALE+"; if (time>"+tLand+" && time<"+end+") { s="+ITEM_SCALE+"+("+ITEM_SCALE+"*0.08)*Math.sin((time-"+tLand+")/0.3*Math.PI); } ";
+    } else {
+      sExpr = "var s="+ITEM_SCALE+"; ";
     }
+    lyr.property("Transform").property("Scale").expression = sExpr + (is3D ? "[s,s,s]" : "[s,s]");
   }
 
   function makeText(comp, str, pos, name){
