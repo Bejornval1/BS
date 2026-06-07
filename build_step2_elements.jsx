@@ -32,12 +32,12 @@
 
   // 6 items: name (matched against timeline layer names), i, fx/fy (2x3 grid)
   var ITEMS = [
-    { name:"yard-debris",  i:5, fx:2950.87, fy:525, label:"top-left"     },
-    { name:"other",        i:4, fx:3256.87, fy:537, label:"top-center"   },
-    { name:"bagged-trash", i:0, fx:3529.87, fy:531, label:"top-right"    },
-    { name:"donation",     i:2, fx:2992.87, fy:888, label:"bottom-left"  },
-    { name:"furniture",    i:3, fx:3268.87, fy:903, label:"bottom-center"},
-    { name:"cardboard",    i:1, fx:3556.87, fy:894, label:"bottom-right" }
+    { name:"loaddash_item_yard-debris",  i:5, fx:2950.87, fy:525, label:"top-left"     },
+    { name:"loaddash_item_other",        i:4, fx:3256.87, fy:537, label:"top-center"   },
+    { name:"loaddash_item_bagged-trash", i:0, fx:3529.87, fy:531, label:"top-right"    },
+    { name:"loaddash_item_donation",     i:2, fx:2992.87, fy:888, label:"bottom-left"  },
+    { name:"loaddash_item_furniture",    i:3, fx:3268.87, fy:903, label:"bottom-center"},
+    { name:"loaddash_item_cardboard",    i:1, fx:3556.87, fy:894, label:"bottom-right" }
   ];
 
   // text
