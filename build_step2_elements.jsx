@@ -134,6 +134,10 @@
   // apply the expressions to an existing item layer (no creation/rename/delete)
   function applyToItem(lyr, it){
     var is3D = lyr.threeDLayer;
+    // make sure the layer is actually live during the animation window
+    if (lyr.inPoint  > tIn)   lyr.inPoint  = tIn  - 0.5;
+    if (lyr.outPoint < tLand) lyr.outPoint = tLand + 1.0;
+    lyr.enabled = true;  // un-hide if it was toggled off
     lyr.property("Transform").property("Position").expression = posExpr(it);
 
     if (ADD_SELF_SPIN){
@@ -178,7 +182,8 @@
       var it = ITEMS[k];
       var L = matchLayer(comp, it.name);
       if (L === "AMBIGUOUS")      { ambiguous.push(it.name); }
-      else if (L)                 { applyToItem(L, it); done.push(it.name+" -> "+L.name+" ("+it.label+")"); }
+      else if (L)                 { applyToItem(L, it);
+                                    done.push("#"+L.index+" "+L.name+" ("+it.label+")  in="+L.inPoint.toFixed(1)+" out="+L.outPoint.toFixed(1)+(L.threeDLayer?" 3D":" 2D")); }
       else                        { missing.push(it.name); }
     }
     if (BUILD_TEXT){
@@ -190,8 +195,13 @@
   }
   app.endUndoGroup();
 
-  var msg = "Step 2 build — comp: " + comp.name + "\n\n"
+  // jump the playhead to mid-orbit so the result is impossible to miss
+  try { comp.time = Math.min(tOrbitEnd, comp.duration - comp.frameDuration); } catch(e){}
+
+  var msg = "Step 2 build — comp: " + comp.name
+          + "\n(duration " + comp.duration.toFixed(1) + "s; playhead moved to " + comp.time.toFixed(1) + "s)\n\n"
           + "Applied to " + done.length + " item(s):\n  " + (done.join("\n  ") || "(none)");
+  if (comp.duration < tLand) msg += "\n\n!! Comp is shorter than " + tLand + "s — the animation window is off the end of the timeline.";
   if (missing.length)   msg += "\n\nNOT FOUND (rename the layer or fix ITEMS[].name):\n  " + missing.join(", ");
   if (ambiguous.length) msg += "\n\nAMBIGUOUS (multiple layers match — rename to be unique):\n  " + ambiguous.join(", ");
   alert(msg);
