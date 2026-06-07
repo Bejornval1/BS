@@ -30,6 +30,14 @@
   var Cx = 3260, Cy = 540, R = 320, N = 6;
   var tIn = 28.8, tForm = 29.4, tOrbitEnd = 31.4, tLand = 32.4;
 
+  // anchor to the SAME refs Camera 2 uses, so items sit where the camera looks.
+  // Camera 2 frames world X = (Step2.x + 960 - Step1.x); these were 2976 / 540
+  // when the spec numbers above were authored. The expression re-derives the
+  // shift live, so it tracks the scene-2 anchor wherever it is in world space.
+  var ANCHOR_TO_STEPS = true;
+  var STEP1_REF = "Step 1", STEP2_REF = "Step 2";
+  var BASE_X = 2976, BASE_Y = 540;   // framed center the spec coords assume
+
   // 6 items: name (matched against timeline layer names), i, fx/fy (2x3 grid)
   var ITEMS = [
     { name:"loaddash_item_yard-debris",  i:5, fx:2950.87, fy:525, label:"top-left"     },
@@ -102,24 +110,33 @@
   function posExpr(it){
     var tin = STAGGER ? (tIn   + it.i*0.08) : tIn;
     var tfo = STAGGER ? (tForm + it.i*0.08) : tForm;
+    var anchor = ANCHOR_TO_STEPS ? [
+      "var shiftX=0, shiftY=0;",
+      "try {",
+      "  var s1=thisComp.layer(\""+STEP1_REF+"\").transform.position[0];",
+      "  var s2=thisComp.layer(\""+STEP2_REF+"\").transform.position[0];",
+      "  var s2y=thisComp.layer(\""+STEP2_REF+"\").transform.position[1];",
+      "  shiftX = (s2 + 960 - s1) - "+BASE_X+";",          // track Camera 2's framed center
+      "  shiftY = s2y - "+BASE_Y+";",
+      "} catch(e){}"
+    ].join("\n") : "var shiftX=0, shiftY=0;";
     return [
-      "Cx="+Cx+"; Cy="+Cy+"; R="+R+"; N="+N+";",
-      "i="+it.i+"; fx="+it.fx+"; fy="+it.fy+";",
-      "tIn="+tin+"; tForm="+tfo+"; tOrbitEnd="+tOrbitEnd+"; tLand="+tLand+";",
-      "base = i*2*Math.PI/N;",
-      "twoTurns = 2*2*Math.PI;",
-      "ringX = Cx + R*Math.cos(base);",
-      "ringY = Cy + R*Math.sin(base);",
+      anchor,
+      "var Cx="+Cx+", Cy="+Cy+", R="+R+", N="+N+";",
+      "var i="+it.i+", fx="+it.fx+", fy="+it.fy+";",
+      "var tIn="+tin+", tForm="+tfo+", tOrbitEnd="+tOrbitEnd+", tLand="+tLand+";",
+      "var base = i*2*Math.PI/N;",
+      "var twoTurns = 2*2*Math.PI;",
+      "var ringX = Cx + R*Math.cos(base);",
+      "var ringY = Cy + R*Math.sin(base);",
       "var px, py;",
       "if (time < tIn) {",                                   // parked off-screen right
-      "  var cx = Cx + 1500;",
-      "  px = cx + R*Math.cos(base); py = Cy + R*Math.sin(base);",
+      "  px = (Cx+1500) + R*Math.cos(base); py = ringY;",
       "} else if (time < tForm) {",                          // fly in -> form ring
       "  var cx = ease(time, tIn, tForm, Cx+1500, Cx);",
-      "  px = cx + R*Math.cos(base); py = Cy + R*Math.sin(base);",
+      "  px = cx + R*Math.cos(base); py = ringY;",
       "} else if (time < tOrbitEnd) {",                      // orbit 2 full turns
-      "  var spin = ease(time, tForm, tOrbitEnd, 0, twoTurns);",
-      "  var a = base + spin;",
+      "  var a = base + ease(time, tForm, tOrbitEnd, 0, twoTurns);",
       "  px = Cx + R*Math.cos(a); py = Cy + R*Math.sin(a);",
       "} else if (time < tLand) {",                          // peel off -> grid
       "  px = ease(time, tOrbitEnd, tLand, ringX, fx);",
@@ -127,7 +144,7 @@
       "} else {",                                            // settled in grid
       "  px = fx; py = fy;",
       "}",
-      "[px, py, 0]"
+      "[px + shiftX, py + shiftY, 0]"
     ].join("\n");
   }
 
