@@ -1,0 +1,23 @@
+{
+  "name": "design-extractor",
+  "version": "1.0.0",
+  "description": "Render-first website design extractor: screenshots, design tokens, assets, motion stack, and an optional AI recreation step.",
+  "type": "module",
+  "bin": {
+    "design-extract": "bin/extract.js"
+  },
+  "scripts": {
+    "extract": "node bin/extract.js",
+    "postinstall": "playwright install chromium"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  },
+  "optionalDependencies": {
+    "@anthropic-ai/sdk": "^0.69.0"
+  },
+  "license": "MIT"
+}
