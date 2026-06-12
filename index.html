@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NIVALIS — Between the Frost and the Stars</title>
+  <meta name="description" content="NIVALIS is a frozen frontier suspended between the frost and the stars. A monolith of ice and starlight, forged in the quiet dark." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="NIVALIS — Between the Frost and the Stars" />
+  <meta property="og:description" content="A frozen frontier suspended between the frost and the stars." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://cdn.creativeclaw.co/u/ec43cdf1/images/8b872fa7-bbf1-4aad-9c42-07ad1c16bdad.jpg" />
+  <meta name="theme-color" content="#05070d" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Space+Grotesk:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="is-loading">
+
+  <!-- ===================== PRELOADER ===================== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <div class="loader__mark">
+        <span class="loader__sigil">❄</span>
+        <span class="loader__brand">NIVALIS</span>
+      </div>
+      <div class="loader__status" data-loader-status>ESTABLISHING UPLINK</div>
+      <div class="loader__bar"><span class="loader__fill" data-loader-fill></span></div>
+      <div class="loader__count"><span data-loader-count>0</span><span class="loader__pct">%</span></div>
+    </div>
+    <div class="loader__coords">64.1466° N&nbsp;&nbsp;/&nbsp;&nbsp;21.9426° W</div>
+  </div>
+
+  <!-- ===================== OVERLAYS ===================== -->
+  <div class="grain" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor__dot"></span></div>
+  <div class="scroll-progress" aria-hidden="true"><span data-scroll-bar></span></div>
+
+  <!-- Background particle field (canvas) -->
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav__brand" data-magnetic data-cursor="link">
+      <span class="nav__sigil">❄</span> NIVALIS
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#manifesto" data-cursor="link"><span>01</span> Manifesto</a>
+      <a href="#monolith" data-cursor="link"><span>02</span> Monolith</a>
+      <a href="#frontier" data-cursor="link"><span>03</span> Frontier</a>
+      <a href="#codex" data-cursor="link"><span>04</span> Codex</a>
+    </nav>
+    <a href="#gateway" class="nav__cta" data-magnetic data-cursor="link">Enter <span class="nav__cta-arrow">→</span></a>
+  </header>
+
+  <main>
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero">
+      <div class="hero__media" data-parallax="0.18">
+        <video class="hero__video" data-hero-video autoplay muted loop playsinline
+               poster="https://cdn.creativeclaw.co/u/ec43cdf1/images/8b872fa7-bbf1-4aad-9c42-07ad1c16bdad.jpg">
+        </video>
+        <img class="hero__fallback"
+             src="https://cdn.creativeclaw.co/u/ec43cdf1/images/8b872fa7-bbf1-4aad-9c42-07ad1c16bdad.jpg"
+             alt="A colossal crystalline monolith of ice suspended in deep space" />
+        <div class="hero__scrim"></div>
+      </div>
+
+      <div class="hero__content">
+        <p class="hero__eyebrow reveal-line"><span>A frozen frontier · est. MMXXVI</span></p>
+        <h1 class="hero__title" data-split>NIVALIS</h1>
+        <p class="hero__tagline reveal-line"><span>Between the frost and the stars — a monolith of ice and silence, forged in the quiet dark.</span></p>
+      </div>
+
+      <div class="hero__footer">
+        <a href="#manifesto" class="hero__scroll" data-cursor="link">
+          <span class="hero__scroll-label">Scroll to descend</span>
+          <span class="hero__scroll-line"><span></span></span>
+        </a>
+        <div class="hero__meta">
+          <span>LAT 64.1466° N</span>
+          <span>VOID-SECTOR 07</span>
+          <span data-clock>--:--:-- UTC</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== MANIFESTO ===================== -->
+    <section class="manifesto" id="manifesto">
+      <span class="section-index">( 01 — Manifesto )</span>
+      <h2 class="manifesto__text" data-split-words>
+        We forge worlds from ice and starlight. In the silence between galaxies, the frost remembers everything light forgets.
+      </h2>
+      <div class="manifesto__foot reveal-line"><span>NIVALIS is not a place. It is a temperature of the imagination.</span></div>
+    </section>
+
+    <!-- ===================== MONOLITH (pinned scene) ===================== -->
+    <section class="chapter" id="monolith">
+      <div class="chapter__sticky">
+        <figure class="chapter__visual">
+          <img data-scale-on-scroll
+               src="https://cdn.creativeclaw.co/u/ec43cdf1/images/8b872fa7-bbf1-4aad-9c42-07ad1c16bdad.jpg"
+               alt="The Monolith — translucent ice glowing from within" />
+          <figcaption>FIG. I — THE MONOLITH</figcaption>
+        </figure>
+        <div class="chapter__copy">
+          <span class="chapter__num">02</span>
+          <h3 class="chapter__title"><span>The</span><span><em>Monolith</em></span></h3>
+          <p class="reveal-line"><span>Ten kilometres of frozen architecture, suspended in the vacuum. Its veins pulse with an aurora that has no source — only memory.</span></p>
+          <ul class="chapter__specs">
+            <li class="reveal-line"><span><b>Composition</b><i>Glacial ice · refracted starlight</i></span></li>
+            <li class="reveal-line"><span><b>Temperature</b><i>−231.4 °C · holding</i></span></li>
+            <li class="reveal-line"><span><b>Resonance</b><i>7.83 Hz · the Schumann hush</i></span></li>
+            <li class="reveal-line"><span><b>Status</b><i>Awake · listening</i></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FRONTIER (horizontal gallery) ===================== -->
+    <section class="frontier" id="frontier">
+      <div class="frontier__head">
+        <span class="section-index">( 03 — The Frontier )</span>
+        <h2 class="frontier__title" data-split-words>A landscape that has never known the sun.</h2>
+      </div>
+
+      <div class="marquee" data-marquee>
+        <div class="marquee__track">
+          <span>FROST · STARLIGHT · SILENCE · THE LONG DARK · AURORA · MONOLITH&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+          <span>FROST · STARLIGHT · SILENCE · THE LONG DARK · AURORA · MONOLITH&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+          <span>FROST · STARLIGHT · SILENCE · THE LONG DARK · AURORA · MONOLITH&nbsp;&nbsp;✦&nbsp;&nbsp;</span>
+        </div>
+      </div>
+
+      <div class="gallery" data-gallery>
+        <div class="gallery__track" data-gallery-track>
+          <figure class="gallery__item">
+            <img src="https://cdn.creativeclaw.co/u/ec43cdf1/images/d66edfb8-e9d6-4905-bb98-a56ec178ff8f.jpg" alt="A vast frozen alien plain beneath a ringed planet" />
+            <figcaption><span>01 / The Plain</span><span>Sector 07 · permafrost</span></figcaption>
+          </figure>
+          <figure class="gallery__item gallery__item--tall">
+            <img src="https://cdn.creativeclaw.co/u/ec43cdf1/images/0d697623-a35b-4b39-885d-d9968b86753e.jpg" alt="Macro frost dendrites glowing from beneath the ice" />
+            <figcaption><span>02 / The Bloom</span><span>Frost · fractal growth</span></figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="https://cdn.creativeclaw.co/u/ec43cdf1/images/8b872fa7-bbf1-4aad-9c42-07ad1c16bdad.jpg" alt="The monolith glowing in the void" />
+            <figcaption><span>03 / The Monolith</span><span>Void-sector · drifting</span></figcaption>
+          </figure>
+          <figure class="gallery__item gallery__item--tall">
+            <img src="https://cdn.creativeclaw.co/u/ec43cdf1/images/970c4e6e-6520-4690-b681-a4790773aaaa.jpg" alt="A luminous gateway of ice and starlight" />
+            <figcaption><span>04 / The Threshold</span><span>Gateway · open</span></figcaption>
+          </figure>
+        </div>
+      </div>
+      <p class="frontier__hint reveal-line"><span>↔ Drag · scroll · the horizon moves with you</span></p>
+    </section>
+
+    <!-- ===================== CODEX ===================== -->
+    <section class="codex" id="codex">
+      <div class="codex__head">
+        <span class="section-index">( 04 — The Codex )</span>
+        <h2 class="codex__title" data-split-words>Four principles, frozen into law.</h2>
+      </div>
+      <ul class="codex__list">
+        <li class="codex__row" data-cursor="link">
+          <span class="codex__no">01</span>
+          <h3 class="codex__name">Stillness</h3>
+          <p class="codex__desc">Motion is borrowed. Stillness is owned. We build what does not need to move to be alive.</p>
+          <span class="codex__glyph">❄</span>
+        </li>
+        <li class="codex__row" data-cursor="link">
+          <span class="codex__no">02</span>
+          <h3 class="codex__name">Refraction</h3>
+          <p class="codex__desc">Light does not pass through us unchanged. Everything that enters the frost leaves bent toward wonder.</p>
+          <span class="codex__glyph">✧</span>
+        </li>
+        <li class="codex__row" data-cursor="link">
+          <span class="codex__no">03</span>
+          <h3 class="codex__name">Endurance</h3>
+          <p class="codex__desc">The cold is patient. It outlasts empires, suns, and certainty. We design for the long dark.</p>
+          <span class="codex__glyph">❉</span>
+        </li>
+        <li class="codex__row" data-cursor="link">
+          <span class="codex__no">04</span>
+          <h3 class="codex__name">Silence</h3>
+          <p class="codex__desc">In the vacuum, no one can hear the monolith hum. Yet it hums. That is the whole of the work.</p>
+          <span class="codex__glyph">✦</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===================== GATEWAY / CTA ===================== -->
+    <section class="gateway" id="gateway">
+      <div class="gateway__media" data-parallax="0.12">
+        <img src="https://cdn.creativeclaw.co/u/ec43cdf1/images/970c4e6e-6520-4690-b681-a4790773aaaa.jpg" alt="The threshold — a gateway of ice and starlight" />
+        <div class="gateway__scrim"></div>
+      </div>
+      <div class="gateway__content">
+        <span class="section-index">( Threshold )</span>
+        <h2 class="gateway__title" data-split>Cross the<br /><em>threshold.</em></h2>
+        <p class="gateway__sub reveal-line"><span>Receive transmissions from the frost. No noise. Only signal — once every solstice.</span></p>
+        <form class="gateway__form" data-signup>
+          <input type="email" required placeholder="your.signal@deepspace" aria-label="Email address" data-cursor="link" />
+          <button type="submit" data-magnetic data-cursor="link"><span>Transmit</span><span class="gateway__arrow">→</span></button>
+        </form>
+        <p class="gateway__note" data-signup-note></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__marquee" data-marquee>
+      <div class="marquee__track">
+        <span>NIVALIS&nbsp;&nbsp;❄&nbsp;&nbsp;</span><span>NIVALIS&nbsp;&nbsp;❄&nbsp;&nbsp;</span>
+        <span>NIVALIS&nbsp;&nbsp;❄&nbsp;&nbsp;</span><span>NIVALIS&nbsp;&nbsp;❄&nbsp;&nbsp;</span>
+      </div>
+    </div>
+    <div class="footer__grid">
+      <div class="footer__col">
+        <span class="footer__label">Index</span>
+        <a href="#manifesto" data-cursor="link">Manifesto</a>
+        <a href="#monolith" data-cursor="link">Monolith</a>
+        <a href="#frontier" data-cursor="link">Frontier</a>
+        <a href="#codex" data-cursor="link">Codex</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Signal</span>
+        <a href="#gateway" data-cursor="link">Transmit</a>
+        <a href="#" data-cursor="link">Dispatches</a>
+        <a href="#" data-cursor="link">The Long Dark</a>
+        <a href="#" data-cursor="link">Field Notes</a>
+      </div>
+      <div class="footer__col">
+        <span class="footer__label">Elsewhere</span>
+        <a href="#" data-cursor="link">Instagram</a>
+        <a href="#" data-cursor="link">Are.na</a>
+        <a href="#" data-cursor="link">X / Void</a>
+        <a href="#" data-cursor="link">Substack</a>
+      </div>
+      <div class="footer__col footer__col--coords">
+        <span class="footer__label">Coordinates</span>
+        <span>64.1466° N</span>
+        <span>21.9426° W</span>
+        <span data-clock>--:--:-- UTC</span>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© MMXXVI NIVALIS — All silence reserved.</span>
+      <span>A recreation in the spirit of the frost.</span>
+      <a href="#hero" data-cursor="link" data-magnetic>Back to surface ↑</a>
+    </div>
+  </footer>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
