@@ -52,6 +52,29 @@ design-extract https://example.com --ai
 Prefer not to `npm link`? Run it in place with `node bin/extract.js <url>`
 or `npm run extract -- <url>` from the `extractor/` folder.
 
+## Run from anywhere (GitHub Action)
+
+No install, works from any browser or phone. A workflow at
+`.github/workflows/extract.yml` runs the extractor on GitHub's runners and
+uploads the results as a downloadable artifact.
+
+1. Go to the repo on **github.com → Actions → "Design Extract"**.
+2. Click **Run workflow**, paste a URL (optionally toggle the AI step), **Run**.
+3. When it finishes, open the run and download the **`design-extract-<host>`**
+   artifact — a zip of `full.png`, the viewport/section screenshots, `assets/`,
+   `design-tokens.json`, `tokens.css`, `tailwind.config.js`, and `report.html`.
+
+For the `--ai` toggle, add an **`ANTHROPIC_API_KEY`** repository secret
+(Settings → Secrets and variables → Actions). Without it the run continues
+without the recreation step.
+
+> ⚠️ **One-time enablement:** GitHub only shows the **Run workflow** button for
+> `workflow_dispatch` workflows that exist on the repository's **default
+> branch**. This workflow is on `claude/igloo-website-recreation-7zoi9m`, so
+> either merge that branch into the default branch, or temporarily set it as the
+> default (Settings → Branches) to expose the button. Until then, the workflow
+> is present but the manual-trigger UI won't list it.
+
 ### Options
 
 | Flag | Default | Description |

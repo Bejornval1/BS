@@ -1,0 +1,72 @@
+name: Design Extract
+
+# Run from anywhere: github.com → Actions → "Design Extract" → Run workflow.
+# Enter a URL; results are uploaded as a downloadable artifact.
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "URL to extract (e.g. https://stripe.com)"
+        required: true
+        type: string
+      viewports:
+        description: "Comma list of WxH viewports"
+        required: false
+        default: "1440x900,390x844"
+        type: string
+      ai:
+        description: "Run the Claude recreation step (needs ANTHROPIC_API_KEY secret)"
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: extractor
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Chromium (with OS deps)
+        run: npx playwright install --with-deps chromium
+
+      - name: Extract
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          ARGS=( "${{ inputs.url }}" --viewports "${{ inputs.viewports }}" )
+          if [ "${{ inputs.ai }}" = "true" ]; then
+            if [ -z "$ANTHROPIC_API_KEY" ]; then
+              echo "::warning::--ai requested but ANTHROPIC_API_KEY secret is not set; running without it."
+            else
+              ARGS+=( --ai )
+            fi
+          fi
+          echo "Running: design-extract ${ARGS[*]}"
+          node bin/extract.js "${ARGS[@]}"
+
+      - name: Name the artifact
+        id: slug
+        run: |
+          host=$(node -e "process.stdout.write(new URL('${{ inputs.url }}').hostname.replace(/^www\./,''))")
+          echo "host=$host" >> "$GITHUB_OUTPUT"
+
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-extract-${{ steps.slug.outputs.host }}
+          path: extractor/extracted/**
+          if-no-files-found: error
+          retention-days: 14
