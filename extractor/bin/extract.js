@@ -14,7 +14,15 @@
  *   --timeout <ms>      Navigation timeout (default: 60000)
  *   --help
  */
-import { extract } from "../src/extractor.js";
+// `extract` is imported lazily (below) so `doctor` and `--help` work even
+// before Playwright is installed.
+
+// Subcommand: `design-extract doctor` runs the preflight check.
+if (process.argv[2] === "doctor") {
+  const { doctor } = await import("../src/doctor.js");
+  await doctor();
+  process.exit(process.exitCode || 0);
+}
 
 function parseArgs(argv) {
   const args = { url: null, viewports: "1440x900,390x844", out: null,
@@ -62,6 +70,7 @@ if (args.help || !args.url) {
   process.exit(args.url ? 0 : 1);
 }
 
+const { extract } = await import("../src/extractor.js");
 extract(args).catch((err) => {
   console.error("\n✖ Extraction failed:", err?.stack || err);
   process.exit(1);

@@ -15,22 +15,42 @@ with Playwright, scrolls it to trigger lazy-loading and scroll animations, and o
 *then* reads the computed result. That's the difference between extracting a real
 design system and scraping markup.
 
-## Install
+## Setup (macOS)
 
 ```bash
-cd extractor
-npm install          # also runs `playwright install chromium`
+# 0. Node 18+? Check; if missing, install via Homebrew.
+node -v   ||   brew install node
+
+# 1. Install deps (also downloads the Chromium browser Playwright drives)
+cd BS/extractor
+npm install
+
+# 2. Make `design-extract` available everywhere
+npm link
+
+# 3. Verify the environment
+design-extract doctor
 ```
+
+`design-extract doctor` checks Node, the Chromium browser, the optional AI SDK,
+and your API key — green across the board means you're ready.
+
+> No Homebrew? Install Node from <https://nodejs.org> (LTS), or use `nvm`
+> (`nvm install` picks up the bundled `.nvmrc`).
 
 ## Use
 
 ```bash
 # Deterministic extraction (screenshots + tokens + assets)
-node bin/extract.js https://example.com
+design-extract https://example.com
 
 # With the Claude recreation step
-ANTHROPIC_API_KEY=sk-ant-... node bin/extract.js https://example.com --ai
+export ANTHROPIC_API_KEY=sk-ant-...
+design-extract https://example.com --ai
 ```
+
+Prefer not to `npm link`? Run it in place with `node bin/extract.js <url>`
+or `npm run extract -- <url>` from the `extractor/` folder.
 
 ### Options
 
