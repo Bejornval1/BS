@@ -1,0 +1,44 @@
+name: Deploy FrameHouse to Netlify
+
+# github.com -> Actions -> "Deploy FrameHouse to Netlify" -> Run workflow.
+# Lives on the default branch so the Run button appears; deploys the app branch.
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "Branch to deploy"
+        required: true
+        default: "claude/framehouse-hero-layout-bc6gew"
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+
+      - name: Stage static site
+        run: |
+          mkdir -p _site
+          cp index.html framehouse-demo.html _site/
+          [ -f .nojekyll ] && cp .nojekyll _site/ || true
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          if [ -z "$NETLIFY_AUTH_TOKEN" ] || [ -z "$NETLIFY_SITE_ID" ]; then
+            echo "::error::Set NETLIFY_AUTH_TOKEN and NETLIFY_SITE_ID repo secrets first."
+            exit 1
+          fi
+          npx --yes netlify-cli@17 deploy \
+            --prod \
+            --dir=_site \
+            --site="$NETLIFY_SITE_ID" \
+            --message "Dispatch deploy of ${{ inputs.branch }} @ ${{ github.sha }}"
