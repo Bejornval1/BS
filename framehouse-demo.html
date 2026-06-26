@@ -117,14 +117,22 @@
   .pdot.on{width:28px;background:var(--gold)}
   .pdot:hover{background:rgba(255,255,255,.6)}
   @media(min-width:900px){.phero{height:clamp(520px,72vh,660px)}}
-  @media(max-width:640px){
+  @media(max-width:760px){
+    /* compact mobile hero: copy always fits the fixed-height slide so the page scrolls cleanly */
+    .phero{height:clamp(440px,80vh,640px)}
     .pslide-grad{background:
-       linear-gradient(to top,#0a0a0b 8%,rgba(10,10,11,.55) 42%,rgba(10,10,11,.08) 78%),
-       linear-gradient(to right,rgba(8,8,10,.7),rgba(8,8,10,.2))}
+       linear-gradient(to top,#0a0a0b 6%,rgba(10,10,11,.6) 44%,rgba(10,10,11,.08) 80%),
+       linear-gradient(to right,rgba(8,8,10,.72),rgba(8,8,10,.2))}
     .pslide-bg{background-position:center 8%}
     .pslide-copy{max-width:none}
-    .pslide-in{padding-bottom:54px}
-    .pcta .btn{flex:1 1 auto}
+    .pbrand{margin-bottom:10px}
+    .pslide-title{font-size:clamp(28px,8vw,40px);line-height:1.06}
+    .pmeta{margin-top:10px;gap:6px;font-size:13px}
+    .pslide-desc{display:none}
+    .pcta{margin-top:18px;gap:10px}
+    .pcta .btn{flex:1 1 auto;padding:11px 16px;font-size:14px}
+    .pslide-in{padding:0 0 58px}
+    .pdots{bottom:16px}
   }
   @media(prefers-reduced-motion:reduce){.pslide{transition:none}.pslide-bg{transform:none}}
 
