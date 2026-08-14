@@ -332,6 +332,20 @@ def build_srt(cues, path):
     open(path, "w").write("\n".join(out))
 
 
+def build_vtt(cues, path):
+    """WebVTT sidecar. Uses voice spans so web players can style each speaker."""
+    out = ["WEBVTT", ""]
+    for c in cues:
+        sp = SPEAKERS[c["speaker"]]
+        words = [t["text"] for t in c["toks"]]
+        is_event = all(t["event"] for t in c["toks"])
+        body = "\n".join(wrap(words))
+        text = body if is_event else f"<v {sp['label']}>{body}"
+        out.append(f"{fmt_srt_time(c['start']).replace(',', '.')} --> "
+                   f"{fmt_srt_time(c['end']).replace(',', '.')}\n{text}\n")
+    open(path, "w").write("\n".join(out))
+
+
 def speaker_intervals(toks, merge_gap=0.45, pad=0.12, duration=None):
     """Merged on-air intervals per speaker, for gating the waveform tint."""
     per = {}
@@ -372,6 +386,7 @@ def main():
 
     build_ass(cues, os.path.join(HERE, "captions.ass"), duration)
     build_srt(cues, os.path.join(HERE, "captions.srt"))
+    build_vtt(cues, os.path.join(HERE, "captions.vtt"))
 
     per = speaker_intervals(toks, duration=duration)
     gate = {sp: enable_expr(iv) for sp, iv in per.items()}
