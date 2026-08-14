@@ -7,3 +7,8 @@ render_meta.json
 fonts/
 *.mp4
 frame_*.png
+intro_raw.mp4
+intro_conformed.mp4
+concat.txt
+bg_loop.mp4
+seam_*.png

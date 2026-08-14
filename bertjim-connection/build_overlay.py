@@ -79,6 +79,7 @@ def main():
     talk = META["talk_time"]
     total_talk = sum(talk.values()) or 1
     keys = ["speaker_0", "speaker_1"]
+    geom = {}
     for i, ((col, name, role), key) in enumerate(zip(rows, keys)):
         y = ly + i * 40
         wname = d.textlength(name, font=F_LEG)
@@ -98,6 +99,9 @@ def main():
         d.text((nx, y), name, font=F_LEG, fill=(*col, 255))
         # swatch
         d.ellipse([nx - 32, y + 6, nx - 16, y + 22], fill=(*col, 255))
+        # remember where this row sits, so the filter can underline whoever is
+        # currently speaking
+        geom[key] = {"x0": int(nx - 32), "x1": lx, "y": y, "underline_y": y + 33}
 
     # ---- waveform guide: centre axis + end ticks
     cy = WAVE_TOP + WAVE_H // 2
@@ -131,7 +135,11 @@ def main():
 
     out = os.path.join(HERE, "overlay.png")
     img.save(out)
-    print("wrote", out, img.size)
+
+    # hand the legend geometry to the filter builder
+    META["legend_geom"] = geom
+    json.dump(META, open(os.path.join(HERE, "render_meta.json"), "w"), indent=1)
+    print("wrote", out, img.size, "legend rows:", list(geom))
 
 
 if __name__ == "__main__":

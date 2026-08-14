@@ -290,17 +290,26 @@ Style: Chip,Instrument Sans,38,{ass_colour(TEXT_RGB)},{ass_colour(TEXT_RGB)},&H9
         body = r"\N".join(body_lines)
         body = body.replace("{", "(").replace("}", ")")
 
+        # Kinetic entrance: a soft fade plus a small scale-up. Scaling animates
+        # about the style's alignment anchor, so unlike \move it does not fight
+        # the automatic line wrapping and collision avoidance.
+        dur_ms = int((c["end"] - c["start"]) * 1000)
+        fi, fo = (140, 110) if chip else (170, 130)
+        fi, fo = min(fi, max(40, dur_ms // 3)), min(fo, max(40, dur_ms // 3))
+        pop = (r"\fad(%d,%d)\fscx96\fscy96\t(0,%d,\fscx100\fscy100)"
+               % (fi, fo, min(190, max(70, dur_ms // 3))))
+
         if chip:
             # simultaneous speech: one compact line floating above the main caption
-            txt = (r"{\fs30\b1\c" + col + r"&\fsp2}" + sp["label"] + ":  "
+            txt = (r"{" + pop + r"\fs30\b1\c" + col + r"&\fsp2}" + sp["label"] + ":  "
                    + r"{\fsp0\fs38\c" + ass_colour(TEXT_RGB) + r"&}" + body)
             style = "Chip"
         elif is_event:
             # non-speech sound: italic, in the speaker's colour, no name tag
-            txt = (r"{\fs42\i1\c" + col + r"&\b0}" + body)
+            txt = (r"{" + pop + r"\fs42\i1\c" + col + r"&\b0}" + body)
             style = "Cap"
         else:
-            txt = (r"{\fs34\b1\c" + col + r"&\fsp2}" + sp["label"] + r"{\fsp0}\N"
+            txt = (r"{" + pop + r"\fs34\b1\c" + col + r"&\fsp2}" + sp["label"] + r"{\fsp0}\N"
                    + r"{\fs54\b1\c" + ass_colour(TEXT_RGB) + r"&}" + body)
             style = "Cap"
 

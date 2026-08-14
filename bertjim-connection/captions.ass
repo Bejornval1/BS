@@ -14,168 +14,168 @@ Style: Chip,Instrument Sans,38,&H00F5EFE9,&H00F5EFE9,&H96000000,&H78000000,-1,0,
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-Dialogue: 0,0:00:02.48,0:00:06.20,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Lena was married to, uh, this\Nguy named Frank Ford, but that,
-Dialogue: 0,0:00:06.24,0:00:09.84,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}that would have been the line, the\Nthrough line is through Jim Hurd, Lena,
-Dialogue: 0,0:00:10.35,0:00:11.50,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and then Burt Ford.
-Dialogue: 0,0:00:12.90,0:00:15.60,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, and that-- I guess that, you\Nknow, I guess that's what I'm saying.
-Dialogue: 0,0:00:15.64,0:00:17.24,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So like for example, if Burt
-Dialogue: 0,0:00:18.12,0:00:19.38,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}never had a succession-
-Dialogue: 1,0:00:19.60,0:00:20.75,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm-hmm
-Dialogue: 0,0:00:20.64,0:00:24.51,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... you know, to get any... And, and once\Nagain, I don't know what you're doing, you
-Dialogue: 1,0:00:24.54,0:00:25.69,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right
-Dialogue: 0,0:00:24.55,0:00:27.76,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... as far as like, you know, trying\Nto figure the land out and stuff.
-Dialogue: 0,0:00:27.80,0:00:33.72,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}But like, you know, at that point it's just\Ngonna stay in his name if he ha- he never
-Dialogue: 0,0:00:33.76,0:00:37.60,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}had a succession. So it's not gonna be passed\Ndown to any of his children or anything like
-Dialogue: 0,0:00:37.64,0:00:44.10,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}that because there isn't any legal vehicle to\Ndo that if they didn't do some type of a
-Dialogue: 1,0:00:44.10,0:00:45.25,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right.
-Dialogue: 0,0:00:44.24,0:00:46.99,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Unless he had already donated\Nit or given, you know,
-Dialogue: 0,0:00:47.08,0:00:49.20,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}donated the property or\Ngot it out of his name-
-Dialogue: 1,0:00:49.46,0:00:50.61,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right
-Dialogue: 0,0:00:49.57,0:00:52.14,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... somehow. Let me go pull this one\Nthing and I'll be right back, okay?
-Dialogue: 0,0:00:52.18,0:00:53.18,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. Thank you. Thank you.
-Dialogue: 0,0:00:53.22,0:00:54.37,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. Thanks.
-Dialogue: 0,0:00:58.28,0:00:59.43,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You
-Dialogue: 0,0:02:22.22,0:02:23.37,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}there?
-Dialogue: 1,0:02:30.46,0:02:31.61,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}I'm here.
-Dialogue: 0,0:02:31.80,0:02:35.26,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, this is a pretty substantial\Namount of paper here on Jim.
-Dialogue: 1,0:02:36.30,0:02:37.45,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}[laughs]
-Dialogue: 0,0:02:36.34,0:02:38.84,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Not a ton, but a, a good bit.
-Dialogue: 0,0:02:40.10,0:02:41.18,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um-
-Dialogue: 0,0:02:41.22,0:02:42.37,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Jim had a lot going on
-Dialogue: 0,0:02:43.04,0:02:43.60,Cap,RESEARCHER,0,0,0,,{\fs42\i1\c&H004DB8FF&\b0}[laughs]
-Dialogue: 0,0:02:43.64,0:02:46.84,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So basically you're... So basically you're\Nlooking for the judgment of possession. Let's
-Dialogue: 0,0:02:49.26,0:02:51.46,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Right. Uh, if... Yeah, if\Nthere's something that...
-Dialogue: 0,0:02:51.51,0:02:56.18,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}'Cause I'm, uh, what I'm thinking\Nis it sounds like Lena Hurd passed
-Dialogue: 0,0:02:57.08,0:03:01.90,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and he didn't have any children, so it\Nkind of dispersed out to his siblings,
-Dialogue: 0,0:03:01.94,0:03:05.89,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}which Lena would've been one of\Nhis siblings i- in theory or Math-
-Dialogue: 1,0:03:05.93,0:03:07.08,Chip,CLERK,0,0,0,,{\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}Right
-Dialogue: 0,0:03:05.93,0:03:06.58,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... or Mathina.
-Dialogue: 0,0:03:06.62,0:03:09.72,Cap,RESEARCHER,0,0,0,,{\fs42\i1\c&H004DB8FF&\b0}[clears throat]
-Dialogue: 0,0:03:21.13,0:03:24.28,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Uh, let me see if I can find the\Njudgment of possession in here.
-Dialogue: 1,0:03:25.74,0:03:26.74,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Okay. Or anything-
-Dialogue: 1,0:03:26.78,0:03:27.93,Chip,CLERK,0,0,0,,{\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}So far, no
-Dialogue: 0,0:03:26.79,0:03:28.32,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... anything with Burt Ford or
-Dialogue: 0,0:03:29.30,0:03:31.10,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Forge or anything like that.
-Dialogue: 0,0:03:49.32,0:03:51.10,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. So the, the...
-Dialogue: 0,0:03:59.24,0:04:01.30,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Margaret Bursey and Mattie Tannehill.
-Dialogue: 0,0:04:01.51,0:04:02.76,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Do you know... Do those names sound familiar?
-Dialogue: 0,0:04:02.80,0:04:04.46,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, those are his sisters. Yes.
-Dialogue: 0,0:04:04.92,0:04:07.10,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Okay. So that's what I see.
-Dialogue: 0,0:04:08.40,0:04:09.55,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um...
-Dialogue: 0,0:04:24.70,0:04:25.85,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Okay.
-Dialogue: 0,0:04:39.42,0:04:45.29,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So yeah, it looks like Burt here comes into\Nit al- a- along with many, many others,
-Dialogue: 0,0:04:45.86,0:04:51.20,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}nieces and nephews. They filed an opposition\Nto the application for administration.
-Dialogue: 1,0:04:51.34,0:04:52.49,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Hmm.
-Dialogue: 0,0:04:53.50,0:04:54.65,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So,
-Dialogue: 0,0:04:55.22,0:05:00.50,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I mean, it's like on petition to Annie Bell,\NAdams, Mary Ford Jenkins, California Ford,
-Dialogue: 0,0:05:01.28,0:05:06.48,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Boyd, Burt Ford, Manish Ford, Mary Lurgin\NAnderson, all residents of Claiborne Parish,
-Dialogue: 0,0:05:06.52,0:05:11.14,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Frank Ford, residing in Oeltown, Arkansas,\NWilliam Phillips, resident in Muskogee,
-Dialogue: 0,0:05:11.18,0:05:17.12,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Alabama, and Willip Lurgin residing in El\NDorado, Arkansas, that your opponents are the
-Dialogue: 0,0:05:17.16,0:05:21.50,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}nieces and nephews of decedent aforesaid,\Nand they r- you know, relists them.
-Dialogue: 0,0:05:21.54,0:05:23.64,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So there's several of them there.
-Dialogue: 1,0:05:23.74,0:05:24.89,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Okay.
-Dialogue: 0,0:05:24.64,0:05:27.74,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, so they, they filed that,
-Dialogue: 0,0:05:28.72,0:05:29.87,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and then
-Dialogue: 0,0:05:30.84,0:05:34.22,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}here's the answer to the\Nopposition and then...
-Dialogue: 0,0:05:37.48,0:05:38.63,Cap,CLERK,0,0,0,,{\fs42\i1\c&H00F0D152&\b0}[sighs]
-Dialogue: 0,0:05:44.52,0:05:46.26,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I'm looking to see.
-Dialogue: 0,0:05:47.48,0:05:49.84,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I don't see a judgment of possession in here,
-Dialogue: 0,0:05:50.54,0:05:53.46,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}which is what, you know, it\Nwould be today. Once again-
-Dialogue: 1,0:05:53.58,0:05:54.73,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right
-Dialogue: 0,0:05:53.72,0:05:54.87,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... this is 1930,
-Dialogue: 0,0:05:55.78,0:05:56.93,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}1940.
-Dialogue: 0,0:05:58.28,0:05:59.43,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um-
-Dialogue: 0,0:05:59.48,0:06:01.26,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Well, it'll show that he\Nwas in the fight. Okay.
-Dialogue: 0,0:06:01.60,0:06:02.75,Cap,RESEARCHER,0,0,0,,{\fs42\i1\c&H004DB8FF&\b0}[laughs]
-Dialogue: 0,0:06:12.05,0:06:15.15,Cap,RESEARCHER,0,0,0,,{\fs42\i1\c&H004DB8FF&\b0}[paper rustling]
-Dialogue: 0,0:06:28.25,0:06:29.51,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I really appreciate you doing this.
-Dialogue: 0,0:06:30.31,0:06:32.21,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, yeah, sure thing. Um.
-Dialogue: 0,0:06:33.43,0:06:36.53,Cap,CLERK,0,0,0,,{\fs42\i1\c&H00F0D152&\b0}[paper rustling]
-Dialogue: 0,0:07:15.69,0:07:18.71,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You know, I, I just don't\Nsee anything doing that.
-Dialogue: 1,0:07:18.87,0:07:20.02,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right.
-Dialogue: 0,0:07:19.21,0:07:22.81,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Now, I will tell you this, there's\Nsomething in here that says this,
-Dialogue: 0,0:07:23.89,0:07:25.04,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}um,
-Dialogue: 0,0:07:25.51,0:07:28.09,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}"In this cause, by reason\Nof the law and the evidence,
-Dialogue: 0,0:07:28.17,0:07:30.33,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}ordered and judgment decree\Nthat Margaret Bursey,
-Dialogue: 0,0:07:30.37,0:07:36.31,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}administratrix of the succession of James\NHurd, be and hereby is authorized and
-Dialogue: 0,0:07:36.35,0:07:41.33,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}to sell for cash to the persons named and the\Nproperty described at the price named in the
-Dialogue: 0,0:07:41.37,0:07:47.12,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}petition as prayed for all at the cost of\Nthe succession." Now, I, I don't see that,
-Dialogue: 0,0:07:47.53,0:07:48.68,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}but I mean,
-Dialogue: 0,0:07:48.77,0:07:49.51,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}you know-
-Dialogue: 1,0:07:49.31,0:07:50.46,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm
-Dialogue: 0,0:07:49.55,0:07:51.16,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... it looks like she
-Dialogue: 0,0:07:51.87,0:07:53.57,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}was authorized to sell.
-Dialogue: 1,0:07:54.17,0:07:55.32,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right. Right.
-Dialogue: 0,0:07:55.77,0:07:58.17,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, hold on. Here's something right here.
-Dialogue: 0,0:07:59.67,0:08:04.49,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, "The petitioner has offered to but\Nsaid property not all from one person.
-Dialogue: 0,0:08:05.75,0:08:10.88,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Uh, R.S. buying her to buy a mare and\Na colt." Now these are all movables.
-Dialogue: 0,0:08:11.83,0:08:12.41,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um.
-Dialogue: 0,0:08:12.45,0:08:15.55,Cap,CLERK,0,0,0,,{\fs42\i1\c&H00F0D152&\b0}[paper rustling]
-Dialogue: 1,0:08:16.37,0:08:17.52,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}So interesting.
-Dialogue: 0,0:08:18.79,0:08:20.99,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, ma-ma-ma-ma-ma-ma-ma.
-Dialogue: 0,0:08:22.47,0:08:28.21,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, see, I just, I, I don't see anything\Nwhere it looks like land transferred-
-Dialogue: 1,0:08:28.43,0:08:29.58,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm-hmm
-Dialogue: 0,0:08:29.83,0:08:32.28,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... from anyone to anyone.
-Dialogue: 0,0:08:33.47,0:08:34.61,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um,
-Dialogue: 0,0:08:34.65,0:08:36.85,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and you know, that would\Nbe the way that like...
-Dialogue: 0,0:08:38.35,0:08:41.27,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I mean, that's, that's how\Nsomebody has possession of it.
-Dialogue: 0,0:08:41.39,0:08:45.51,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Right. And that's the connection I'm\Ntrying to, to find that bridge between
-Dialogue: 0,0:08:46.65,0:08:49.09,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Jim, uh, Burt,
-Dialogue: 0,0:08:51.61,0:08:53.37,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and just try to fill that gap.
-Dialogue: 0,0:08:53.75,0:08:56.43,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}'Cause it's been weird in our\Nfamily the whole entire time.
-Dialogue: 0,0:08:56.47,0:08:59.41,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}We, Lena doesn't have a death\Ncertificate that we can find,
-Dialogue: 0,0:08:59.45,0:09:02.15,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}so she basically disappears after 1910.
-Dialogue: 0,0:09:03.03,0:09:04.95,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}And, um, we don't know what happened to her.
-Dialogue: 0,0:09:05.69,0:09:09.83,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}And, uh, and then you have\NBurt, and then you have Burt,
-Dialogue: 0,0:09:10.55,0:09:13.15,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}um, mentioning the Jim Hurd estate
-Dialogue: 0,0:09:14.29,0:09:15.44,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}in his will.
-Dialogue: 0,0:09:15.93,0:09:16.63,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So I-
-Dialogue: 1,0:09:16.23,0:09:17.38,Chip,CLERK,0,0,0,,{\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}Right
-Dialogue: 0,0:09:16.67,0:09:17.43,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... I'm just trying to make that connection.
-Dialogue: 0,0:09:17.47,0:09:21.49,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Well, it sounds, it sounds like\Nthis was not a very happy family.
-Dialogue: 0,0:09:21.67,0:09:22.26,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah.
-Dialogue: 0,0:09:22.30,0:09:22.85,Cap,RESEARCHER,0,0,0,,{\fs42\i1\c&H004DB8FF&\b0}[laughs]
-Dialogue: 0,0:09:22.31,0:09:23.46,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Right.
-Dialogue: 1,0:09:24.51,0:09:25.06,Chip,CLERK,0,0,0,,{\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}Um-
-Dialogue: 1,0:09:24.55,0:09:25.70,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}A lot of fighting
-Dialogue: 0,0:09:25.21,0:09:28.81,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... it says here, this is\Njust like on the opposition,
-Dialogue: 0,0:09:28.85,0:09:33.01,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}"Defendant in opposition admits that the\Nparties named are heirs of James Hurd,
-Dialogue: 0,0:09:33.05,0:09:35.31,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}but by no means are they all the heirs.
-Dialogue: 0,0:09:36.09,0:09:38.01,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Uh, they oppose the
-Dialogue: 0,0:09:39.55,0:09:45.33,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}selling. Defendant in opposition to answer to\Nparagraph six denies that the opponent, Annie
-Dialogue: 0,0:09:45.37,0:09:51.49,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Belle Lusien Adams, is the proper person to be\Nappointed to make an administratrix of the
-Dialogue: 0,0:09:52.27,0:09:56.39,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}for the reasons that the heirs of the estate\Ndo not desire that she be appointed in that
-Dialogue: 0,0:09:56.43,0:10:02.43,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}petition. In opposition, she joined\NMary Ford, Jenkins Caledonia Ford, Boyd
-Dialogue: 0,0:10:02.47,0:10:08.37,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Burt Ford, Menish Ford, Larry Lusien Anderson,\NWilliams, and possibly all the others
-Dialogue: 0,0:10:08.41,0:10:11.51,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}without their knowledge and\Nconsent, and that they have no...
-Dialogue: 0,0:10:11.57,0:10:14.16,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}And they have no objection to\NRichard Green be appointed.
-Dialogue: 0,0:10:15.27,0:10:17.87,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}That Annie Belle Lusien\Ncannot handle the matter.
-Dialogue: 0,0:10:17.91,0:10:21.77,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}She's not capable of doing so, even though\Nshe's lived on the property for a long time,
-Dialogue: 0,0:10:21.81,0:10:26.45,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and that the deceased, Jim Hurd, did\Nappreciate during his lifetime the way that...
-Dialogue: 0,0:10:26.59,0:10:30.24,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}did not appreciate, or he did\Nappreciate the way she treated him-
-Dialogue: 1,0:10:30.34,0:10:31.49,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm-hmm
-Dialogue: 0,0:10:30.67,0:10:32.93,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... and frequently, frequently\Nstated that she did,
-Dialogue: 0,0:10:32.97,0:10:37.45,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}that he did not want Annie Belle Lusien Adams\Nto have anything to do with the handling of
-Dialogue: 0,0:10:38.35,0:10:44.25,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, so it looks like it was contested,\Nand maybe that's the reason that this
-Dialogue: 0,0:10:44.29,0:10:46.59,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}thing drew out as long as it did.
-Dialogue: 0,0:10:46.63,0:10:47.78,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You know what I mean?
-Dialogue: 1,0:10:47.23,0:10:48.38,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right. Right.
-Dialogue: 0,0:10:48.31,0:10:52.21,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}'Cause I would expect, you know, there to\Nhave been a judgment of possession in here.
-Dialogue: 0,0:10:52.61,0:10:54.21,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I just don't, I just don't see it.
-Dialogue: 0,0:10:54.25,0:10:57.41,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So, um, now look, here's the bonus for you.
-Dialogue: 0,0:10:57.51,0:11:00.25,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You make it out to that really nice\Nweather you got out there in Utah,
-Dialogue: 0,0:11:00.29,0:11:04.14,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and come here where it's about\Nninety-nine or a hundred degrees-
-Dialogue: 1,0:11:04.17,0:11:05.32,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}[laughs]
-Dialogue: 0,0:11:04.18,0:11:05.72,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... and about eighty percent humidity.
-Dialogue: 0,0:11:05.87,0:11:08.82,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You can come here and\Nsearch these little records-
-Dialogue: 1,0:11:09.13,0:11:10.28,Chip,RESEARCHER,0,0,0,,{\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}I will
-Dialogue: 0,0:11:09.51,0:11:10.69,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... to your heart's content.
-Dialogue: 0,0:11:10.73,0:11:13.35,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Hey, well, you did more than\Nenough, and I sure do appreciate it.
-Dialogue: 0,0:11:14.01,0:11:15.91,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right, man. Well, listen,\Ngood luck to you, okay?
-Dialogue: 0,0:11:15.95,0:11:16.97,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. Thank you so much.
-Dialogue: 0,0:11:17.01,0:11:18.03,Cap,CLERK,0,0,0,,{\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Take care of yourself. All right. Bye.
-Dialogue: 0,0:11:18.07,0:11:19.22,Cap,RESEARCHER,0,0,0,,{\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. You too. Bye.
-Dialogue: 0,0:11:21.19,0:11:23.29,Cap,RESEARCHER,0,0,0,,{\fs42\i1\c&H004DB8FF&\b0}[phone clicks]
+Dialogue: 0,0:00:02.48,0:00:06.20,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Lena was married to, uh, this\Nguy named Frank Ford, but that,
+Dialogue: 0,0:00:06.24,0:00:09.84,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}that would have been the line, the\Nthrough line is through Jim Hurd, Lena,
+Dialogue: 0,0:00:10.35,0:00:11.50,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and then Burt Ford.
+Dialogue: 0,0:00:12.90,0:00:15.60,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, and that-- I guess that, you\Nknow, I guess that's what I'm saying.
+Dialogue: 0,0:00:15.64,0:00:17.24,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So like for example, if Burt
+Dialogue: 0,0:00:18.12,0:00:19.38,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}never had a succession-
+Dialogue: 1,0:00:19.60,0:00:20.75,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm-hmm
+Dialogue: 0,0:00:20.64,0:00:24.51,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... you know, to get any... And, and once\Nagain, I don't know what you're doing, you
+Dialogue: 1,0:00:24.54,0:00:25.69,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right
+Dialogue: 0,0:00:24.55,0:00:27.76,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... as far as like, you know, trying\Nto figure the land out and stuff.
+Dialogue: 0,0:00:27.80,0:00:33.72,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}But like, you know, at that point it's just\Ngonna stay in his name if he ha- he never
+Dialogue: 0,0:00:33.76,0:00:37.60,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}had a succession. So it's not gonna be passed\Ndown to any of his children or anything like
+Dialogue: 0,0:00:37.64,0:00:44.10,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}that because there isn't any legal vehicle to\Ndo that if they didn't do some type of a
+Dialogue: 1,0:00:44.10,0:00:45.25,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right.
+Dialogue: 0,0:00:44.24,0:00:46.99,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Unless he had already donated\Nit or given, you know,
+Dialogue: 0,0:00:47.08,0:00:49.20,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}donated the property or\Ngot it out of his name-
+Dialogue: 1,0:00:49.46,0:00:50.61,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right
+Dialogue: 0,0:00:49.57,0:00:52.14,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... somehow. Let me go pull this one\Nthing and I'll be right back, okay?
+Dialogue: 0,0:00:52.18,0:00:53.18,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. Thank you. Thank you.
+Dialogue: 0,0:00:53.22,0:00:54.37,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. Thanks.
+Dialogue: 0,0:00:58.28,0:00:59.43,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You
+Dialogue: 0,0:02:22.22,0:02:23.37,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}there?
+Dialogue: 1,0:02:30.46,0:02:31.61,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}I'm here.
+Dialogue: 0,0:02:31.80,0:02:35.26,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, this is a pretty substantial\Namount of paper here on Jim.
+Dialogue: 1,0:02:36.30,0:02:37.45,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}[laughs]
+Dialogue: 0,0:02:36.34,0:02:38.84,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Not a ton, but a, a good bit.
+Dialogue: 0,0:02:40.10,0:02:41.18,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um-
+Dialogue: 0,0:02:41.22,0:02:42.37,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Jim had a lot going on
+Dialogue: 0,0:02:43.04,0:02:43.60,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,186,\fscx100\fscy100)\fs42\i1\c&H004DB8FF&\b0}[laughs]
+Dialogue: 0,0:02:43.64,0:02:46.84,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So basically you're... So basically you're\Nlooking for the judgment of possession. Let's
+Dialogue: 0,0:02:49.26,0:02:51.46,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Right. Uh, if... Yeah, if\Nthere's something that...
+Dialogue: 0,0:02:51.51,0:02:56.18,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}'Cause I'm, uh, what I'm thinking\Nis it sounds like Lena Hurd passed
+Dialogue: 0,0:02:57.08,0:03:01.90,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and he didn't have any children, so it\Nkind of dispersed out to his siblings,
+Dialogue: 0,0:03:01.94,0:03:05.89,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}which Lena would've been one of\Nhis siblings i- in theory or Math-
+Dialogue: 1,0:03:05.93,0:03:07.08,Chip,CLERK,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}Right
+Dialogue: 0,0:03:05.93,0:03:06.58,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... or Mathina.
+Dialogue: 0,0:03:06.62,0:03:09.72,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs42\i1\c&H004DB8FF&\b0}[clears throat]
+Dialogue: 0,0:03:21.13,0:03:24.28,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Uh, let me see if I can find the\Njudgment of possession in here.
+Dialogue: 1,0:03:25.74,0:03:26.74,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Okay. Or anything-
+Dialogue: 1,0:03:26.78,0:03:27.93,Chip,CLERK,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}So far, no
+Dialogue: 0,0:03:26.79,0:03:28.32,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... anything with Burt Ford or
+Dialogue: 0,0:03:29.30,0:03:31.10,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Forge or anything like that.
+Dialogue: 0,0:03:49.32,0:03:51.10,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. So the, the...
+Dialogue: 0,0:03:59.24,0:04:01.30,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Margaret Bursey and Mattie Tannehill.
+Dialogue: 0,0:04:01.51,0:04:02.76,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Do you know... Do those names sound familiar?
+Dialogue: 0,0:04:02.80,0:04:04.46,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, those are his sisters. Yes.
+Dialogue: 0,0:04:04.92,0:04:07.10,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Okay. So that's what I see.
+Dialogue: 0,0:04:08.40,0:04:09.55,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um...
+Dialogue: 0,0:04:24.70,0:04:25.85,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Okay.
+Dialogue: 0,0:04:39.42,0:04:45.29,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So yeah, it looks like Burt here comes into\Nit al- a- along with many, many others,
+Dialogue: 0,0:04:45.86,0:04:51.20,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}nieces and nephews. They filed an opposition\Nto the application for administration.
+Dialogue: 1,0:04:51.34,0:04:52.49,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Hmm.
+Dialogue: 0,0:04:53.50,0:04:54.65,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So,
+Dialogue: 0,0:04:55.22,0:05:00.50,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I mean, it's like on petition to Annie Bell,\NAdams, Mary Ford Jenkins, California Ford,
+Dialogue: 0,0:05:01.28,0:05:06.48,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Boyd, Burt Ford, Manish Ford, Mary Lurgin\NAnderson, all residents of Claiborne Parish,
+Dialogue: 0,0:05:06.52,0:05:11.14,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Frank Ford, residing in Oeltown, Arkansas,\NWilliam Phillips, resident in Muskogee,
+Dialogue: 0,0:05:11.18,0:05:17.12,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Alabama, and Willip Lurgin residing in El\NDorado, Arkansas, that your opponents are the
+Dialogue: 0,0:05:17.16,0:05:21.50,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}nieces and nephews of decedent aforesaid,\Nand they r- you know, relists them.
+Dialogue: 0,0:05:21.54,0:05:23.64,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So there's several of them there.
+Dialogue: 1,0:05:23.74,0:05:24.89,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Okay.
+Dialogue: 0,0:05:24.64,0:05:27.74,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, so they, they filed that,
+Dialogue: 0,0:05:28.72,0:05:29.87,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and then
+Dialogue: 0,0:05:30.84,0:05:34.22,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}here's the answer to the\Nopposition and then...
+Dialogue: 0,0:05:37.48,0:05:38.63,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs42\i1\c&H00F0D152&\b0}[sighs]
+Dialogue: 0,0:05:44.52,0:05:46.26,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I'm looking to see.
+Dialogue: 0,0:05:47.48,0:05:49.84,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I don't see a judgment of possession in here,
+Dialogue: 0,0:05:50.54,0:05:53.46,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}which is what, you know, it\Nwould be today. Once again-
+Dialogue: 1,0:05:53.58,0:05:54.73,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right
+Dialogue: 0,0:05:53.72,0:05:54.87,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... this is 1930,
+Dialogue: 0,0:05:55.78,0:05:56.93,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}1940.
+Dialogue: 0,0:05:58.28,0:05:59.43,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um-
+Dialogue: 0,0:05:59.48,0:06:01.26,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Well, it'll show that he\Nwas in the fight. Okay.
+Dialogue: 0,0:06:01.60,0:06:02.75,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs42\i1\c&H004DB8FF&\b0}[laughs]
+Dialogue: 0,0:06:12.05,0:06:15.15,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs42\i1\c&H004DB8FF&\b0}[paper rustling]
+Dialogue: 0,0:06:28.25,0:06:29.51,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I really appreciate you doing this.
+Dialogue: 0,0:06:30.31,0:06:32.21,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, yeah, sure thing. Um.
+Dialogue: 0,0:06:33.43,0:06:36.53,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs42\i1\c&H00F0D152&\b0}[paper rustling]
+Dialogue: 0,0:07:15.69,0:07:18.71,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You know, I, I just don't\Nsee anything doing that.
+Dialogue: 1,0:07:18.87,0:07:20.02,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right.
+Dialogue: 0,0:07:19.21,0:07:22.81,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Now, I will tell you this, there's\Nsomething in here that says this,
+Dialogue: 0,0:07:23.89,0:07:25.04,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}um,
+Dialogue: 0,0:07:25.51,0:07:28.09,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}"In this cause, by reason\Nof the law and the evidence,
+Dialogue: 0,0:07:28.17,0:07:30.33,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}ordered and judgment decree\Nthat Margaret Bursey,
+Dialogue: 0,0:07:30.37,0:07:36.31,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}administratrix of the succession of James\NHurd, be and hereby is authorized and
+Dialogue: 0,0:07:36.35,0:07:41.33,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}to sell for cash to the persons named and the\Nproperty described at the price named in the
+Dialogue: 0,0:07:41.37,0:07:47.12,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}petition as prayed for all at the cost of\Nthe succession." Now, I, I don't see that,
+Dialogue: 0,0:07:47.53,0:07:48.68,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}but I mean,
+Dialogue: 0,0:07:48.77,0:07:49.51,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}you know-
+Dialogue: 1,0:07:49.31,0:07:50.46,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm
+Dialogue: 0,0:07:49.55,0:07:51.16,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... it looks like she
+Dialogue: 0,0:07:51.87,0:07:53.57,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}was authorized to sell.
+Dialogue: 1,0:07:54.17,0:07:55.32,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right. Right.
+Dialogue: 0,0:07:55.77,0:07:58.17,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, hold on. Here's something right here.
+Dialogue: 0,0:07:59.67,0:08:04.49,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, "The petitioner has offered to but\Nsaid property not all from one person.
+Dialogue: 0,0:08:05.75,0:08:10.88,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Uh, R.S. buying her to buy a mare and\Na colt." Now these are all movables.
+Dialogue: 0,0:08:11.83,0:08:12.41,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um.
+Dialogue: 0,0:08:12.45,0:08:15.55,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs42\i1\c&H00F0D152&\b0}[paper rustling]
+Dialogue: 1,0:08:16.37,0:08:17.52,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}So interesting.
+Dialogue: 0,0:08:18.79,0:08:20.99,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, ma-ma-ma-ma-ma-ma-ma.
+Dialogue: 0,0:08:22.47,0:08:28.21,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah, see, I just, I, I don't see anything\Nwhere it looks like land transferred-
+Dialogue: 1,0:08:28.43,0:08:29.58,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm-hmm
+Dialogue: 0,0:08:29.83,0:08:32.28,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... from anyone to anyone.
+Dialogue: 0,0:08:33.47,0:08:34.61,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um,
+Dialogue: 0,0:08:34.65,0:08:36.85,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and you know, that would\Nbe the way that like...
+Dialogue: 0,0:08:38.35,0:08:41.27,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I mean, that's, that's how\Nsomebody has possession of it.
+Dialogue: 0,0:08:41.39,0:08:45.51,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Right. And that's the connection I'm\Ntrying to, to find that bridge between
+Dialogue: 0,0:08:46.65,0:08:49.09,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Jim, uh, Burt,
+Dialogue: 0,0:08:51.61,0:08:53.37,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and just try to fill that gap.
+Dialogue: 0,0:08:53.75,0:08:56.43,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}'Cause it's been weird in our\Nfamily the whole entire time.
+Dialogue: 0,0:08:56.47,0:08:59.41,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}We, Lena doesn't have a death\Ncertificate that we can find,
+Dialogue: 0,0:08:59.45,0:09:02.15,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}so she basically disappears after 1910.
+Dialogue: 0,0:09:03.03,0:09:04.95,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}And, um, we don't know what happened to her.
+Dialogue: 0,0:09:05.69,0:09:09.83,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}And, uh, and then you have\NBurt, and then you have Burt,
+Dialogue: 0,0:09:10.55,0:09:13.15,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}um, mentioning the Jim Hurd estate
+Dialogue: 0,0:09:14.29,0:09:15.44,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}in his will.
+Dialogue: 0,0:09:15.93,0:09:16.63,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So I-
+Dialogue: 1,0:09:16.23,0:09:17.38,Chip,CLERK,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}Right
+Dialogue: 0,0:09:16.67,0:09:17.43,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... I'm just trying to make that connection.
+Dialogue: 0,0:09:17.47,0:09:21.49,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Well, it sounds, it sounds like\Nthis was not a very happy family.
+Dialogue: 0,0:09:21.67,0:09:22.26,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Yeah.
+Dialogue: 0,0:09:22.30,0:09:22.85,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,183,\fscx100\fscy100)\fs42\i1\c&H004DB8FF&\b0}[laughs]
+Dialogue: 0,0:09:22.31,0:09:23.46,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Right.
+Dialogue: 1,0:09:24.51,0:09:25.06,Chip,CLERK,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,183,\fscx100\fscy100)\fs30\b1\c&H00F0D152&\fsp2}CLERK:  {\fsp0\fs38\c&H00F5EFE9&}Um-
+Dialogue: 1,0:09:24.55,0:09:25.70,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}A lot of fighting
+Dialogue: 0,0:09:25.21,0:09:28.81,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... it says here, this is\Njust like on the opposition,
+Dialogue: 0,0:09:28.85,0:09:33.01,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}"Defendant in opposition admits that the\Nparties named are heirs of James Hurd,
+Dialogue: 0,0:09:33.05,0:09:35.31,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}but by no means are they all the heirs.
+Dialogue: 0,0:09:36.09,0:09:38.01,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Uh, they oppose the
+Dialogue: 0,0:09:39.55,0:09:45.33,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}selling. Defendant in opposition to answer to\Nparagraph six denies that the opponent, Annie
+Dialogue: 0,0:09:45.37,0:09:51.49,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Belle Lusien Adams, is the proper person to be\Nappointed to make an administratrix of the
+Dialogue: 0,0:09:52.27,0:09:56.39,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}for the reasons that the heirs of the estate\Ndo not desire that she be appointed in that
+Dialogue: 0,0:09:56.43,0:10:02.43,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}petition. In opposition, she joined\NMary Ford, Jenkins Caledonia Ford, Boyd
+Dialogue: 0,0:10:02.47,0:10:08.37,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Burt Ford, Menish Ford, Larry Lusien Anderson,\NWilliams, and possibly all the others
+Dialogue: 0,0:10:08.41,0:10:11.51,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}without their knowledge and\Nconsent, and that they have no...
+Dialogue: 0,0:10:11.57,0:10:14.16,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}And they have no objection to\NRichard Green be appointed.
+Dialogue: 0,0:10:15.27,0:10:17.87,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}That Annie Belle Lusien\Ncannot handle the matter.
+Dialogue: 0,0:10:17.91,0:10:21.77,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}She's not capable of doing so, even though\Nshe's lived on the property for a long time,
+Dialogue: 0,0:10:21.81,0:10:26.45,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and that the deceased, Jim Hurd, did\Nappreciate during his lifetime the way that...
+Dialogue: 0,0:10:26.59,0:10:30.24,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}did not appreciate, or he did\Nappreciate the way she treated him-
+Dialogue: 1,0:10:30.34,0:10:31.49,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Mm-hmm
+Dialogue: 0,0:10:30.67,0:10:32.93,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... and frequently, frequently\Nstated that she did,
+Dialogue: 0,0:10:32.97,0:10:37.45,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}that he did not want Annie Belle Lusien Adams\Nto have anything to do with the handling of
+Dialogue: 0,0:10:38.35,0:10:44.25,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Um, so it looks like it was contested,\Nand maybe that's the reason that this
+Dialogue: 0,0:10:44.29,0:10:46.59,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}thing drew out as long as it did.
+Dialogue: 0,0:10:46.63,0:10:47.78,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You know what I mean?
+Dialogue: 1,0:10:47.23,0:10:48.38,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}Right. Right.
+Dialogue: 0,0:10:48.31,0:10:52.21,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}'Cause I would expect, you know, there to\Nhave been a judgment of possession in here.
+Dialogue: 0,0:10:52.61,0:10:54.21,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}I just don't, I just don't see it.
+Dialogue: 0,0:10:54.25,0:10:57.41,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}So, um, now look, here's the bonus for you.
+Dialogue: 0,0:10:57.51,0:11:00.25,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You make it out to that really nice\Nweather you got out there in Utah,
+Dialogue: 0,0:11:00.29,0:11:04.14,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}and come here where it's about\Nninety-nine or a hundred degrees-
+Dialogue: 1,0:11:04.17,0:11:05.32,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}[laughs]
+Dialogue: 0,0:11:04.18,0:11:05.72,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... and about eighty percent humidity.
+Dialogue: 0,0:11:05.87,0:11:08.82,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}You can come here and\Nsearch these little records-
+Dialogue: 1,0:11:09.13,0:11:10.28,Chip,RESEARCHER,0,0,0,,{\fad(140,110)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs30\b1\c&H004DB8FF&\fsp2}RESEARCHER:  {\fsp0\fs38\c&H00F5EFE9&}I will
+Dialogue: 0,0:11:09.51,0:11:10.69,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}... to your heart's content.
+Dialogue: 0,0:11:10.73,0:11:13.35,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Hey, well, you did more than\Nenough, and I sure do appreciate it.
+Dialogue: 0,0:11:14.01,0:11:15.91,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right, man. Well, listen,\Ngood luck to you, okay?
+Dialogue: 0,0:11:15.95,0:11:16.97,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. Thank you so much.
+Dialogue: 0,0:11:17.01,0:11:18.03,Cap,CLERK,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H00F0D152&\fsp2}CLERK{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}Take care of yourself. All right. Bye.
+Dialogue: 0,0:11:18.07,0:11:19.22,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs34\b1\c&H004DB8FF&\fsp2}RESEARCHER{\fsp0}\N{\fs54\b1\c&H00F5EFE9&}All right. You too. Bye.
+Dialogue: 0,0:11:21.19,0:11:23.29,Cap,RESEARCHER,0,0,0,,{\fad(170,130)\fscx96\fscy96\t(0,190,\fscx100\fscy100)\fs42\i1\c&H004DB8FF&\b0}[phone clicks]
 Dialogue: 0,0:00:00.00,0:00:01.00,TC,,0,0,0,,{\pos(160,1002)}00:00
 Dialogue: 0,0:00:01.00,0:00:02.00,TC,,0,0,0,,{\pos(160,1002)}00:01
 Dialogue: 0,0:00:02.00,0:00:03.00,TC,,0,0,0,,{\pos(160,1002)}00:02

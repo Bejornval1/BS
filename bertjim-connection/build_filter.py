@@ -46,9 +46,11 @@ def main():
         f"[wraw]{chain}[wtint]",
         f"[wtint]pad={W}:{H}:{MARGIN}:{WAVE_TOP}:color=black,format=rgba[wpad]",
 
-        # dark ground; additive blend keeps the wave's anti-aliasing clean
-        f"color=c={BG}:s={W}x{H}:r={FPS},format=rgba[bg]",
-        f"[bg][wpad]blend=all_mode=addition:shortest=1,format=rgba[v1]",
+        # animated ground: the Creative Claw motion-graphics loop, looped to
+        # length and conformed to our rate. Additive blend keeps the wave's
+        # anti-aliasing clean over it.
+        f"[2:v]fps={FPS},scale={W}:{H},format=rgba[bgloop]",
+        f"[bgloop][wpad]blend=all_mode=addition:shortest=1,format=rgba[v1]",
 
         # static chrome
         f"[v1][1:v]overlay=0:0:shortest=1[v2]",
@@ -58,10 +60,36 @@ def main():
         # timecode rides in captions.ass -- no drawtext in this build.)
         f"[v2]drawbox=x='{MARGIN}+{prog_w}*min(1\\,t/{DUR:.3f})-1':y={BAR_Y - 12}:"
         f"w=3:h=20:color=0xFFFFFF@0.95:t=fill[v3]",
-
-        # burned-in captions
-        f"[v3]subtitles=captions.ass:fontsdir=fonts:alpha=1[vout]",
     ]
+
+    # Active-speaker accents, gated by the same intervals that tint the wave:
+    # a full-width bar along the top edge, and an underline on that speaker's
+    # legend row. Together they answer "who is talking right now" even on a
+    # frame with no caption up.
+    geom = META.get("legend_geom", {})
+    prev = "v3"
+    for i, sp in enumerate(("speaker_0", "speaker_1")):
+        r, g, b = META["colors"][sp]
+        hexc = f"0x{r:02X}{g:02X}{b:02X}"
+        gate = gates[sp]
+        parts.append(
+            f"[{prev}]drawbox=x=0:y=0:w={W}:h=4:color={hexc}@0.85:t=fill"
+            f":enable='{gate}'[a{i}]"
+        )
+        prev = f"a{i}"
+        if sp in geom:
+            gm = geom[sp]
+            parts.append(
+                f"[{prev}]drawbox=x={gm['x0']}:y={gm['underline_y']}:"
+                f"w={gm['x1'] - gm['x0']}:h=2:color={hexc}@0.9:t=fill"
+                f":enable='{gate}'[b{i}]"
+            )
+            prev = f"b{i}"
+
+    parts.append(
+        # burned-in captions
+        f"[{prev}]subtitles=captions.ass:fontsdir=fonts:alpha=1[vout]"
+    )
 
     out = os.path.join(HERE, "filter.txt")
     open(out, "w").write(";\n".join(parts) + "\n")

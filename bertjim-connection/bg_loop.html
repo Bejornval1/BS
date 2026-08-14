@@ -1,0 +1,49 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+  /* 12s seamless loop: every animation returns to its 0% state at 100%.
+     Kept very dark and very slow -- this sits UNDER the waveform and captions,
+     so it must add life without competing for attention. */
+  html,body{margin:0;padding:0;width:1920px;height:1080px;background:#0A0E14;overflow:hidden}
+  .bloom{position:absolute;border-radius:50%;filter:blur(90px);mix-blend-mode:screen}
+
+  #amber{width:1500px;height:900px;background:radial-gradient(circle,rgba(255,184,77,.11),rgba(255,184,77,0) 68%);
+    top:-180px;left:-260px;animation:driftA 12s linear infinite}
+  @keyframes driftA{
+    0%{transform:translate(0,0) scale(1)}
+    25%{transform:translate(280px,120px) scale(1.09)}
+    50%{transform:translate(520px,-40px) scale(1.02)}
+    75%{transform:translate(220px,-150px) scale(1.11)}
+    100%{transform:translate(0,0) scale(1)}}
+
+  #cyan{width:1700px;height:1000px;background:radial-gradient(circle,rgba(82,209,240,.10),rgba(82,209,240,0) 68%);
+    bottom:-260px;right:-300px;animation:driftB 12s linear infinite}
+  @keyframes driftB{
+    0%{transform:translate(0,0) scale(1.04)}
+    25%{transform:translate(-300px,-110px) scale(1)}
+    50%{transform:translate(-480px,60px) scale(1.1)}
+    75%{transform:translate(-180px,170px) scale(1.02)}
+    100%{transform:translate(0,0) scale(1.04)}}
+
+  /* slow scanning hairlines -- one full cell of travel per loop, so it wraps */
+  #grid{position:absolute;inset:-120px;
+    background:repeating-linear-gradient(to right,rgba(120,140,165,.055) 0 1px,transparent 1px 120px);
+    animation:slide 12s linear infinite}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(120px)}}
+
+  /* a single slow sweep of light crossing the frame, looping cleanly */
+  #sweep{position:absolute;top:0;bottom:0;width:620px;left:-620px;
+    background:linear-gradient(90deg,transparent,rgba(150,180,210,.055),transparent);
+    animation:cross 12s linear infinite}
+  @keyframes cross{from{transform:translateX(0)}to{transform:translateX(2540px)}}
+
+  #vignette{position:absolute;inset:0;
+    background:radial-gradient(ellipse 78% 68% at 50% 44%,transparent 42%,rgba(4,6,10,.72) 100%)}
+</style></head>
+<body>
+  <div class="bloom" id="amber"></div>
+  <div class="bloom" id="cyan"></div>
+  <div id="grid"></div>
+  <div id="sweep"></div>
+  <div id="vignette"></div>
+</body></html>

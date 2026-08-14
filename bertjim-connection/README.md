@@ -23,24 +23,58 @@ Rename them in `SPEAKERS` at the top of `build_captions.py` and re-run.
 m4a ──> ElevenLabs Scribe v2 ──> diar.json      (word timestamps + speaker IDs)
                                     │
         build_captions.py ──────────┼──> captions.ass   (burn-in, 2 colours + timecode)
-                                    │    captions.srt   (portable sidecar)
+                                    │    captions.srt / .vtt  (portable sidecars)
                                     │    render_meta.json
         build_overlay.py  ──────────┼──> overlay.png    (title, legend, speaker timeline)
         build_filter.py   ──────────┴──> filter.txt     (ffmpeg filter graph)
         build_transcript.py ───────────> TRANSCRIPT.md
+
+  Creative Claw (HyperFrames, HTML/CSS -> MP4)
+        bg_loop.html      ─────────────> bg_loop.mp4    (12s seamless motion loop)
+        intro (see below) ─────────────> intro.mp4      (7.5s title sequence)
                                     │
-                                  ffmpeg ──> captioned MP4
+                        ffmpeg ──> body_mg.mp4 ──> assemble.sh ──> final MP4
 ```
 
-Reproduce (needs `diar.json`, the source audio as `source.m4a`, and fonts in
-`fonts/`):
+The layers are separate because `render_html_video` caps at 300s and this call
+runs 683s. Splitting them also keeps each layer cheap to iterate: the intro is
+one 5-credit render, the background is another, and neither forces a re-render
+of the 11-minute body.
+
+| Layer | Built by | Why there |
+|---|---|---|
+| Animated ground | Creative Claw, 12s seamless loop, `-stream_loop` | constant slow motion under everything |
+| Waveform | ffmpeg `showwaves`, tinted per frame by speaker gates | must stay sample-accurate to the audio |
+| Static chrome | Pillow → `overlay.png` | crisp text, rendered once |
+| Active-speaker accents | ffmpeg `drawbox`, same gates | top bar + legend underline follow the voice |
+| Captions | libass, kinetic fade + scale per cue | burned in, two speaker colours |
+| Intro | Creative Claw, 7.5s | assembles the interface the body opens with |
+
+Reproduce (needs `diar.json`, the source audio as `source.m4a`, `bg_loop.mp4`,
+and fonts in `fonts/`):
 
 ```sh
 python3 build_captions.py && python3 build_overlay.py && python3 build_filter.py
-ffmpeg -i source.m4a -loop 1 -i overlay.png -/filter_complex filter.txt \
-  -map "[vout]" -map 0:a -c:v libx264 -preset fast -crf 26 -pix_fmt yuv420p \
-  -c:a aac -b:a 128k -movflags +faststart -shortest out.mp4
+ffmpeg -i source.m4a -loop 1 -i overlay.png -stream_loop -1 -i bg_loop.mp4 \
+  -/filter_complex filter.txt -map "[vout]" -map 0:a \
+  -c:v libx264 -preset fast -crf 26 -pix_fmt yuv420p -profile:v high -level 4.1 \
+  -c:a aac -b:a 128k -movflags +faststart -shortest body_mg.mp4
+./assemble.sh intro.mp4 body_mg.mp4 final.mp4
 ```
+
+### Matching the intro to the body
+
+The intro ends holding the exact layout the body opens with, so the cut reads as
+the animation completing rather than as a transition. Two things had to line up:
+
+- **Title tracking.** Pillow puts 3px *between* glyphs (569.56px of ink); CSS
+  `letter-spacing` adds a gap after every glyph, and Chromium's advances differ
+  slightly. Assuming 3px drifted the title ~20px across 23 characters, which
+  popped at the cut. The intro now measures itself at `letter-spacing:0` and
+  solves for the value that reproduces the exact ink width.
+- **Background phase.** The intro uses the same bloom/grid elements as the
+  looping background and animates them so that at t=7.5s they land precisely on
+  the loop's t=0 state.
 
 ## Notes on the transcript data
 
