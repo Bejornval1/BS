@@ -67,11 +67,14 @@ ffmpeg -i source.m4a -loop 1 -i overlay.png -stream_loop -1 -i bg_loop.mp4 \
 The intro ends holding the exact layout the body opens with, so the cut reads as
 the animation completing rather than as a transition. Two things had to line up:
 
-- **Title tracking.** Pillow puts 3px *between* glyphs (569.56px of ink); CSS
-  `letter-spacing` adds a gap after every glyph, and Chromium's advances differ
-  slightly. Assuming 3px drifted the title ~20px across 23 characters, which
-  popped at the cut. The intro now measures itself at `letter-spacing:0` and
-  solves for the value that reproduces the exact ink width.
+- **Title tracking.** Pillow puts 3px *between* glyphs; CSS `letter-spacing`
+  adds a gap after every glyph, and Chromium's advances for this face are
+  narrower. Assuming 3px left the intro title 12px short across 23 characters,
+  which popped at the cut. Measuring a render at a known tracking gives a linear
+  solve — ink width is `489 + letter_spacing × 22` — so the intro hardcodes
+  **3.5455px** to hit the body's 567px exactly. (Doing this measurement in-page
+  at load does *not* work: the script runs before the webfont resolves and
+  measures fallback metrics.)
 - **Background phase.** The intro uses the same bloom/grid elements as the
   looping background and animates them so that at t=7.5s they land precisely on
   the loop's t=0 state.
