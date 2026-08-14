@@ -1,0 +1,9 @@
+# large / regenerable render inputs and outputs
+source.m4a
+overlay.png
+overlay_preview.png
+filter.txt
+render_meta.json
+fonts/
+*.mp4
+frame_*.png
